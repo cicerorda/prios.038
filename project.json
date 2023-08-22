@@ -1,6 +1,5 @@
 {
   "name": "ChamadosPrio.038",
-  "projectId": "0819c5f3-0326-40b9-bcc1-3940f5c41e39",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
@@ -14,7 +13,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.6.1.0",
-  "projectVersion": "1.0.4",
+  "projectVersion": "1.0.25",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -22,7 +21,6 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
-    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
