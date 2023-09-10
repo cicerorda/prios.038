@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1566,13177</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1566,10017</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
@@ -89,16 +89,11 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1576,9992" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap:VirtualizedContainerService.HintSize="1576,9952" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Name="Count">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="Count" />
       <Variable x:TypeArguments="x:String" Name="regiao" />
       <Variable x:TypeArguments="x:String" Name="analista" />
       <Variable x:TypeArguments="x:Boolean" Name="login" />
@@ -230,7 +225,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Looping para continuar enviando os processos até que todos os chamados sejam respondidos" Condition="[Count &lt; 50]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1514,8782" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Looping para continuar enviando os processos até que todos os chamados sejam respondidos" Condition="[Count &lt; 50]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1514,8742" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1478,8536" sap2010:WorkflowViewState.IdRef="Sequence_20">
           <sap:WorkflowViewStateService.ViewState>
@@ -553,7 +548,7 @@
                     </Assign.Value>
                   </Assign>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1320,101" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[chamado]" />
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim paragrafo As String = ObterInfos&#xA;Dim padrao_n1 As String = &quot;\b\d{5,6}\b&quot;&#xA;Dim padrao_n2 As String = &quot;\b\d{2,4}\b&quot;&#xA;Dim n1 As String = &quot;&quot;&#xA;Dim n2 As String = &quot;&quot;&#xA;&#xA;Dim match_n1 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n1)&#xA;Dim match_n2 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n2)&#xA;&#xA;For Each m1 As System.Text.RegularExpressions.Match In match_n1&#xA;    n1 = m1.Value&#xA;    For Each m2 As System.Text.RegularExpressions.Match In match_n2&#xA;        n2 = m2.Value.PadLeft(4, &quot;0&quot;c)&#xA;        Exit For&#xA;    Next&#xA;    If Not String.IsNullOrEmpty(n2) Then&#xA;        Exit For&#xA;    End If&#xA;Next&#xA;&#xA;If Not String.IsNullOrEmpty(n1) AndAlso Not String.IsNullOrEmpty(n2) Then&#xA;    result = n1 &amp; &quot;/&quot; &amp; n2&#xA;Else&#xA;    result = &quot;dados não encontrados&quot;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="1320,174" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim paragrafo As String = ObterInfos&#xD;&#xA;Dim padrao_n1 As String = &quot;/(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/&quot;&#xD;&#xA;Dim padrao_n2 As String = &quot;/(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/&quot;&#xD;&#xA;Dim n1 As String = &quot;&quot;&#xD;&#xA;Dim n2 As String = &quot;&quot;&#xD;&#xA;&#xD;&#xA;Dim match_n1 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n1)&#xD;&#xA;Dim match_n2 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n2)&#xD;&#xA;&#xD;&#xA;For Each m1 As System.Text.RegularExpressions.Match In match_n1&#xD;&#xA;    n1 = m1.Value&#xD;&#xA;    For Each m2 As System.Text.RegularExpressions.Match In match_n2&#xD;&#xA;        n2 = m2.Value.PadLeft(4, &quot;0&quot;c)&#xD;&#xA;        Exit For&#xD;&#xA;    Next&#xD;&#xA;    If Not String.IsNullOrEmpty(n2) Then&#xD;&#xA;        Exit For&#xD;&#xA;    End If&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;If Not String.IsNullOrEmpty(n1) AndAlso Not String.IsNullOrEmpty(n2) Then&#xD;&#xA;    result = n1&#xD;&#xA;Else&#xD;&#xA;    result = &quot;dados não encontrados&quot;&#xD;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="1320,174" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                     <ui:InvokeCode.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="ObterInfos">[TextoChamado]</InArgument>
                       <OutArgument x:TypeArguments="x:String" x:Key="result">[resultadoString]</OutArgument>
