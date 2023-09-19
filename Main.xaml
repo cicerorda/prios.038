@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1566,10017</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1564,24176</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
@@ -89,11 +89,16 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1576,9952" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap:VirtualizedContainerService.HintSize="1574,13231" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Default="0" Name="Count" />
+      <Variable x:TypeArguments="x:Int32" Name="Count">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="regiao" />
       <Variable x:TypeArguments="x:String" Name="analista" />
       <Variable x:TypeArguments="x:Boolean" Name="login" />
@@ -103,8 +108,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1514,142" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge.exe" />
-    <TryCatch sap2010:Annotation.AnnotationText="Efetuar login no Jira" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1514,866" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+    <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1512,142" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge.exe" />
+    <TryCatch sap2010:Annotation.AnnotationText="Efetuar login no Jira" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1512,866" sap2010:WorkflowViewState.IdRef="TryCatch_9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -225,22 +230,22 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Looping para continuar enviando os processos até que todos os chamados sejam respondidos" Condition="[Count &lt; 50]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1514,8742" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Looping para continuar enviando os processos até que todos os chamados sejam respondidos" Condition="[Count &lt; 50]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1512,12021" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1478,8536" sap2010:WorkflowViewState.IdRef="Sequence_20">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1476,11815" sap2010:WorkflowViewState.IdRef="Sequence_20">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Projeto de serviço" sap:VirtualizedContainerService.HintSize="1416,8414" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Projeto de serviço" sap:VirtualizedContainerService.HintSize="1414,11693" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1382,8188" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1380,11467" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="Grupo" />
                     <Variable x:TypeArguments="x:String" Name="Cota" />
@@ -256,16 +261,16 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1320,1459" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
+                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1318,3516" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
-                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="500,1275" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="602,3332" sap2010:WorkflowViewState.IdRef="Sequence_51">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,403" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="540,403" sap2010:WorkflowViewState.IdRef="TryCatch_10">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -296,7 +301,7 @@
                               </Catch>
                             </TryCatch.Catches>
                           </TryCatch>
-                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,403" sap2010:WorkflowViewState.IdRef="TryCatch_12">
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="540,403" sap2010:WorkflowViewState.IdRef="TryCatch_12">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -349,22 +354,22 @@
                               </Catch>
                             </TryCatch.Catches>
                           </TryCatch>
-                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,61" sap2010:WorkflowViewState.IdRef="TryCatch_15">
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="540,2118" sap2010:WorkflowViewState.IdRef="TryCatch_15">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <TryCatch.Try>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="500,1363" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502,1881" sap2010:WorkflowViewState.IdRef="Sequence_19">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,403" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="440,735" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                   <TryCatch.Try>
                                     <uix:NGetText DelayBefore="2" DisplayName="Get Text 'Grupo'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" TextString="[Grupo]" Timeout="5" Version="V3">
                                       <uix:NGetText.Target>
@@ -379,7 +384,7 @@
                                     </uix:NGetText>
                                   </TryCatch.Try>
                                   <TryCatch.Catches>
-                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="406,563" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -390,7 +395,7 @@
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                         </ActivityAction.Argument>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="400,496" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,494" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -423,8 +428,16 @@
                                     </Catch>
                                   </TryCatch.Catches>
                                 </TryCatch>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="438,101" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;grupo: &quot;+grupo]" />
-                                <uix:NGetText DisplayName="Get Text 'Cota'" sap:VirtualizedContainerService.HintSize="438,166" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" TextString="[cota]" Version="V3">
+                                <Assign sap:VirtualizedContainerService.HintSize="440,70" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[Grupo]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[Grupo.padleft(6, "0"c)]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="440,101" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;grupo: &quot;+grupo]" />
+                                <uix:NGetText DisplayName="Get Text 'Cota'" sap:VirtualizedContainerService.HintSize="440,166" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" TextString="[cota]" Version="V3">
                                   <uix:NGetText.Target>
                                     <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-2639" CvElementArea="453, 489, 202, 52" CvTextArea="462, 507, 40, 16" CvTextArgument="0262" CvType="InputBox" DesignTimeRectangle="455, 544, 874, 49" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'0262'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='7' parentid='proforma-view-1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='sc-hrWEMg heTXWa' parentid='proforma-view-1' tag='DIV' aaname='' /&gt;" Guid="6dbe6999-9ffd-47b4-a07b-a2df0fe82ffc" ImageBase64="" InformativeScreenshot="eb2a1ec6f8e67353009e351f24c0505c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='[CCRD-2639] PRIORIDADE CONTEMPLAÇÃO BEM MOVEL - MANOEL FERREIRA SOBRINHO - Sicredi - JIRA' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
@@ -435,9 +448,9 @@
                                     </uix:TargetAnchorable>
                                   </uix:NGetText.Target>
                                 </uix:NGetText>
-                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,308" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="440,276" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                                   <TryCatch.Try>
-                                    <Assign sap:VirtualizedContainerService.HintSize="262,71" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                    <Assign sap:VirtualizedContainerService.HintSize="262,70" sap2010:WorkflowViewState.IdRef="Assign_3">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[Cota]</OutArgument>
                                       </Assign.To>
@@ -447,7 +460,7 @@
                                     </Assign>
                                   </TryCatch.Try>
                                   <TryCatch.Catches>
-                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_13">
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_13">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -462,11 +475,19 @@
                                     </Catch>
                                   </TryCatch.Catches>
                                 </TryCatch>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="438,101" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;cota: &quot;+cota]" />
+                                <Assign sap:VirtualizedContainerService.HintSize="440,70" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[Cota]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[cota.padleft(4, "0"c)]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="440,101" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;cota: &quot;+cota]" />
                               </Sequence>
                             </TryCatch.Try>
                             <TryCatch.Catches>
-                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="504,21" sap2010:WorkflowViewState.IdRef="Catch`1_15">
+                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="506,21" sap2010:WorkflowViewState.IdRef="Catch`1_15">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -477,7 +498,7 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                   </ActivityAction.Argument>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="400,306" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="400,304" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -508,7 +529,7 @@
                               </Catch>
                             </TryCatch.Catches>
                           </TryCatch>
-                          <uix:NGetText DisplayName="Get Text 'Descrição'" sap:VirtualizedContainerService.HintSize="438,166" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" TextString="[Descricao]" Version="V3">
+                          <uix:NGetText DisplayName="Get Text 'Descrição'" sap:VirtualizedContainerService.HintSize="540,166" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" TextString="[Descricao]" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-2635" DesignTimeRectangle="428, 211, 917, 30" DesignTimeScaleFactor="1.25" FriendlyName="'Bom Dia'" FullSelectorArgument="&lt;webctrl id='description-val' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='description-val' tag='DIV' type='' class='field-ignore-highlight editable-field inactive' aaname='      ' /&gt;" Guid="c25195bd-0154-4df1-a18e-3087b27d6b7a" InformativeScreenshot="4943c7fa4717c54873566534d5119097.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='[CCRD-2635] HP COMERCIO E REPRESENTACOES DE PRODUTOS AGROPECUARIOS EIRELI EPP- Contrato - Sicredi - JIRA' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -526,8 +547,8 @@
                       <ActivityFunc x:TypeArguments="x:Boolean" />
                     </ui:RetryScope.Condition>
                   </ui:RetryScope>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1320,101" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;descricao: &quot;+descricao]" />
-                  <uix:NGetText DisplayName="Get Text 'Editar'" sap:VirtualizedContainerService.HintSize="1320,166" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" TextString="[titulo]" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1318,101" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;descricao: &quot;+descricao]" />
+                  <uix:NGetText DisplayName="Get Text 'Editar'" sap:VirtualizedContainerService.HintSize="1318,166" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" TextString="[titulo]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-2663" CvType="AnyWordGroup" DesignTimeRectangle="403, 244, 794, 43" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'PATRICIA FRANCISCA'" FullSelectorArgument="&lt;webctrl id='summary-val' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl id='summary-val' tag='H1' type='' class='editable-field inactive' /&gt;" Guid="975ac95b-270f-47a0-a9f2-438b30c47b28" ImageBase64="" InformativeScreenshot="81b7c1017cd2669699e73ea7b5c710b2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='[CCRD-2663] PATRICIA FRANCISCA INACIO DA SILVA 010452/0080-00 - Sicredi - JIRA' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -538,8 +559,8 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1320,101" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;titulo: &quot;+titulo]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="1320,71" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1318,101" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;titulo: &quot;+titulo]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="1318,71" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[TextoChamado]</OutArgument>
                     </Assign.To>
@@ -547,23 +568,50 @@
                       <InArgument x:TypeArguments="x:String">[String.format("{0} {1} {2} {3}", Grupo, Cota, Descricao, titulo)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1320,101" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[chamado]" />
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim paragrafo As String = ObterInfos&#xD;&#xA;Dim padrao_n1 As String = &quot;/(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/&quot;&#xD;&#xA;Dim padrao_n2 As String = &quot;/(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/&quot;&#xD;&#xA;Dim n1 As String = &quot;&quot;&#xD;&#xA;Dim n2 As String = &quot;&quot;&#xD;&#xA;&#xD;&#xA;Dim match_n1 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n1)&#xD;&#xA;Dim match_n2 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n2)&#xD;&#xA;&#xD;&#xA;For Each m1 As System.Text.RegularExpressions.Match In match_n1&#xD;&#xA;    n1 = m1.Value&#xD;&#xA;    For Each m2 As System.Text.RegularExpressions.Match In match_n2&#xD;&#xA;        n2 = m2.Value.PadLeft(4, &quot;0&quot;c)&#xD;&#xA;        Exit For&#xD;&#xA;    Next&#xD;&#xA;    If Not String.IsNullOrEmpty(n2) Then&#xD;&#xA;        Exit For&#xD;&#xA;    End If&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;If Not String.IsNullOrEmpty(n1) AndAlso Not String.IsNullOrEmpty(n2) Then&#xD;&#xA;    result = n1&#xD;&#xA;Else&#xD;&#xA;    result = &quot;dados não encontrados&quot;&#xD;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="1320,174" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1318,101" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[chamado]" />
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim paragrafo As String = ObterInfos&#xA;Dim padrao_n1 As String = &quot;/(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/&quot;&#xA;Dim padrao_n2 As String = &quot;/(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/&quot;&#xA;Dim n1 As String = &quot;&quot;&#xA;Dim n2 As String = &quot;&quot;&#xA;&#xA;Dim match_n1 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n1)&#xA;Dim match_n2 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n2)&#xA;&#xA;For Each m1 As System.Text.RegularExpressions.Match In match_n1&#xA;    n1 = m1.Value&#xA;    For Each m2 As System.Text.RegularExpressions.Match In match_n2&#xA;        n2 = m2.Value.PadLeft(4, &quot;0&quot;c)&#xA;        Exit For&#xA;    Next&#xA;    If Not String.IsNullOrEmpty(n2) Then&#xA;        Exit For&#xA;    End If&#xA;Next&#xA;&#xA;If Not String.IsNullOrEmpty(n1) AndAlso Not String.IsNullOrEmpty(n2) Then&#xA;    result = n1&#xA;Else&#xA;    result = &quot;dados não encontrados&quot;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="1318,174" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                     <ui:InvokeCode.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="ObterInfos">[TextoChamado]</InArgument>
                       <OutArgument x:TypeArguments="x:String" x:Key="result">[resultadoString]</OutArgument>
                     </ui:InvokeCode.Arguments>
                   </ui:InvokeCode>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1320,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[resultadoString]" />
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1320,359" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1318,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[resultadoString]" />
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1318,594" sap2010:WorkflowViewState.IdRef="TryCatch_14">
                     <TryCatch.Try>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetregionAtend.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="GetregionAtend.xaml">
-                        <ui:InvokeWorkflowFile.Arguments>
-                          <InOutArgument x:TypeArguments="x:String" x:Key="Region">[regiao]</InOutArgument>
-                          <InOutArgument x:TypeArguments="x:String" x:Key="Processo">[resultadoString]</InOutArgument>
-                          <InOutArgument x:TypeArguments="x:String" x:Key="nome">[nome]</InOutArgument>
-                        </ui:InvokeWorkflowFile.Arguments>
-                      </ui:InvokeWorkflowFile>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,357" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetregionAtend.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="GetregionAtend.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InOutArgument x:TypeArguments="x:String" x:Key="Region">
+                              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="regiao" />
+                            </InOutArgument>
+                            <InOutArgument x:TypeArguments="x:String" x:Key="Processo">
+                              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="resultadoString" />
+                            </InOutArgument>
+                            <InOutArgument x:TypeArguments="x:String" x:Key="nome">
+                              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="nome" />
+                            </InOutArgument>
+                            <InOutArgument x:TypeArguments="x:String" x:Key="Grupo">
+                              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Grupo" />
+                            </InOutArgument>
+                            <InOutArgument x:TypeArguments="x:String" x:Key="Cota">
+                              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Cota" />
+                            </InOutArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                        <Assign sap:VirtualizedContainerService.HintSize="338,71" sap2010:WorkflowViewState.IdRef="Assign_8">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[resultadoString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Grupo+"/"+Cota]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
                     </TryCatch.Try>
                     <TryCatch.Catches>
                       <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_14">
@@ -581,26 +629,20 @@
                       </Catch>
                     </TryCatch.Catches>
                   </TryCatch>
-                  <If Condition="[resultadoString = &quot;dados não encontrados&quot;]" sap:VirtualizedContainerService.HintSize="1320,4503" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[resultadoString = &quot;dados não encontrados&quot;]" sap:VirtualizedContainerService.HintSize="1318,5490" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="604,1633" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <Sequence sap:VirtualizedContainerService.HintSize="602,1633" sap2010:WorkflowViewState.IdRef="Sequence_8">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="542,101" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Dados do processo incorretos&quot;]" />
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="542,403" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="540,101" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Dados do processo incorretos&quot;]" />
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="540,403" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                           <TryCatch.Try>
-                            <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Iniciar atendimento'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="10" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Em Atendimento'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_47" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
                               <uix:NClick.Target>
-                                <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-3766" CvElementArea="926, 364, 180, 40" CvTextArea="940, 376, 151, 17" CvTextArgument="Iniciar atendimento" CvType="Button" DesignTimeRectangle="941, 318, 150, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Iniciar atendimento'" FullSelectorArgument="&lt;webctrl parentid='action_id_41' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='action_id_41' tag='SPAN' type='' class='trigger-label' aaname='Iniciar atendimento' check:text='Iniciar atendimento' /&gt;" Guid="8ce01f14-3119-4b6c-9558-8a043640a5d9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAbCAYAAACEE5ZqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOLSURBVHhe7Zi9ihVBEIV9KJ9AMFdzNTBSMBWMBENNNXNDwWSNTEQwMRENRBBN1EgMRGHfYORbOMu5h+7Z3l1n9scKPu6d7qrqU9Xn7qDnfv/ZmYpiacpoxSqU0YpVKKMVq1BGK1ahjFasQhmtWIUyWrEKZbRiFcpox8TL1++mC1duT+8/fG7unzU2jPb1+4/p8vW709bTFxtBI9x7sDXdvPNw+vHzV3M/YcAMmoG39s86abSzPo//2mjq9zg0nCajoe3Stbt7Wg/DPzPaaeQkGe0kU0Y7ImW0MVYxGt95JX768m137/zFG7vwqvTc1quT76wpx/MQna8KzvLYvAg1/Obtx726cz+KuXro8D3wnjQL7fGdNe1LC59eK+N6tZ49f7Whh0+fh3J49vqaMetaA5+jUM3M1T51IeM009b9+T5kb7kvhoxGMusaoIR5HIK9EdXKtcdb2xs1fLDUyEHkuVzu1Vv3d78rrsVIPT55zkvq9deaAbNRvi7Ge27VkklYVx+K83lwntdXDP37GdT2WqAz5rTREzG+lnlA3dZfNMV6b9JIbY8dMlo2ARRK0XPPiQR5Q0k2qBzXdxCyXs9oLe05m54Wavm8qAUeAzlX1ZMWnZe5PHuex0oLutGfuXkG++SRr5hWLnlpNMW17iJnAMOvzjQM6y4SYYpr1UmyacEzvxJHMb2cOebqSafXa61BXkBr+FqXxl4tYM0vI3vr5ebcPVbz7mnLOHpxQwm/S55b9XpnQJ4DixiNw/czRMbo2Wu2YnrNJSP11K/rVEyaUxzEaHmewxp7ys/YljbIuXus7o2clnahuKMYLfU7qQcW/YuWQ3J8sOSQm03n8FsNtxit19I5oh16WvyMuVqs+UWNaIOcu8fq3nraEuaTM9L6fkabOyP1wCJG6120g0ANthfPGfwCNey55pzReurXL3NEO/S0jPQFrC1ltHzugYaeNnSjn+dWr3NnoNl7g0WMxrMG540Q2/tXJ3FeT/uHMRqM1OsZgX1/xQi0e739jMZzq5bWiFN+5nEO+vUscu4e62fw3XsF+n30ZHvvjug7e9e632WrPrR6Ux8Zu5jRQPUQI9R4DpY88hXHd/6/zGPIGTXaSD3QsMCHLn3agxzoiNHAzwDOYY045WeeZud1IOfusa4P8lzweujwnn0975LaqpFzyDmlZtgwWlEsRRmtWIUyWrEKZbRiBXamv4/9D7euBABkAAAAAElFTkSuQmCC" InformativeScreenshot="aa82c1c8eb65f94be330cf394a5e6409.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target CvElementArea="926, 364, 180, 40" CvTextArea="940, 376, 151, 17" CvTextArgument="Iniciar atendimento" CvType="Button" DesignTimeRectangle="928, 312, 177, 38" ElementType="Text" FriendlyName="'Iniciar atendimento'" FullSelectorArgument="&lt;webctrl id='action_id_41' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='action_id_41' tag='A' type='' class='aui-button toolbar-trigger issueaction-workflow-transition' aaname='Iniciar atendimento' check:innerText='Iniciar atendimento' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALUAAAAqCAYAAAD1Yxo/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQ3SURBVHhe7Z0xi1VXFIXzo/wFAXtjrylSGUgrWAVSapt0mVKw0SqNCDY2EosgiDZJKkkREtCQRpsr38C6rFmcc+deh4fvHveGj3n3nL332WfvNW8eU8x8MZWVDWYl6rLhrERdNpydEfW79++nt//9P/3z75ui2BVus6gRdMu5KPaA2yzqeocu9ozbLOqWY1HsBbcSdTEEbiXqYgjcStTFELiVqIshcCtRF0PgVqIuhsCtRF0MgVuJuhgCtxL1jnj4+Nfpy6vfTc9+e9nc/5xxu7Cof//z9fTV17emk7u/NPeX+P72yXTj5p3p9V9/N/cThslQGW5rf3RS1J97Pxy3EvVGdN9PUcOeRE1tV67fmms9NG6fVNR75JhEfcyUqHdEiXodw4ma13ysePHqj9O9S5e/OYWPGx7b+vjBa9YU43E0KH/ccpb75tDV3CdPn895l74Bl/JRh++B30m90B6vWdO+auGr50q/Xq57Dx6dqYev3g/F8Oz51WPWtQbeR6GcGat98kL6qaet+fk+5N1y/2NwO5ioKZR1DUtNcD+a401Trlz76eT+mRw+RHJk0/NchHTt2x9OX8uvxZp8fOU5BdG7X6sH9EbxEoHfuZVLgmRd95Cf94PzPL98uL+fQW7PBTpjqTbuhI+vZRyQt/VOLV+/m2okt/tuwe1gos6GAUVng5aeE13em5dkMxXj9W0h8/VE3ao9e9OrhVzeL3KB+0D2VflUi87LWJ49zn1VC3VTf8bmGewTR7x8WrHEpajl15pF9mArbgf9+JHiZN0bQhPk18qTZIMFz3z3O/LpxSyxlE91er7WGuSwW4PWumrs5QLWfPB5t15s9t191e9ebenHXVy8wmfJcytf7wzIc7bidjSi5qLniS999Ow5Wz69RiZr8um+Xqd88htBbBF1nuewxp7i07dVG2Tf3VdzI6ZVu5DfRUSd9TtZz1bcju6dOgfi+BCJITYbnINuNbfF2nytOtfUDr1a/IylXKy5KNbUBtl399XcerUl9Cd7pPXzRL10RtazFbejEXVPVA7N0BB7/pzBO4sGu9RIZ20+3deFs6Z26NWy5l7A2qFEnc89qKFXG3VTP8+tuy6dQc1+t624HY2oedaQvGn49n77gZ/n0/7HiBrW5OuJjn3/MS2o3fOdJ2qeW7m0hp/iM45zqF/PIvvuvn4Gr/2uwH1//Pn+PCPunXfXus+ylR9ad9M90ncLbkclalA+Li7U5BwiccTLj9f8Ptp9iFkr6jX5QIMBH7Dq0x7k8NaIGvwM4BzW8FN8xql3ngey7+7r9UGeC56POvzOvp6zJLdyZB+yT1nzVtwuLOqiOAbcStTFELiVqIshcCtRF0PgVqIuhsCtRF0MgVuJuhgCtxJ1MQRus6jr71MXe8ZtFnX9J4Fiz7jNosbqf74Ue8XtjKjLykawEnXZYDZNHwDeKc/suxuvGwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
-                                    </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
+                                <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-16087" DesignTimeRectangle="531, 257, 107, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Em Atendimento'" FullSelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' type='' class='dropdown-text' aaname='Em Atendimento' check:text='Em Atendimento' /&gt;" Guid="016157a0-16ac-4a77-80cd-c78e6d457b0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAXCAYAAAAFtBHMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVGhD7VY7TypREPaf8BP8CZT2t6G03NLkNlY2NNoYEhttjAUFlbGggAoKCiiMJBgDmKDGLVY0AuERFEK+O3Meyy4cHlE0d5Od5Et2Z87ZnZlvzszZ2vpzjRABhVEZIhgwKkMEA0ZliGDAqAwRDBiVIYIBozJEMOB7yQ0xL0NceNdsANHCh/x0v4s9g/3HoeKs5ujZeka+NUG77iBiWvs/w/eignLq70gVNBzsetd8GzVcNakkWiMqiwmKSb89lhug/TlC/tyv3yi85B28ofpJ/thviJrW/gL2b0YU8xcOie/FG5RXv0mcdODQP8ppB0VOGlW81753Oybr+PfIM9l/GRc2e/OT5J130SZb+/YdmeZErMPnBzLnd9i7+aBfS2k/vGJndq8Hu1RlwAAJek488A75zDYZhEd0W42/IN9kUqW0mx3sWXKPS3a2LU6QkP4Ap/HpP3fSXTxqG/t8K9u2jJNOHr/QyRPrvxTnPRL0Td4npM/rK8K23D9q2X2l06L8iJy9o9yaxszfzKfv1f8UfC+KPJ/oBKqggBHKORv73N749ZPmBSXzMPlKs4MV861wClucNlDgYr6kB7wB5awMdDveQKIugy2mG4gd1RDhmcQBUgKvkg1Y2Z747/DhRXxDJoekP0Qq+YRDnWCyi3+qk872q8sn8rsHRyVxGXnrx1lRPkzwWLIRO3tFUfhLRUkFtty/CqJHDTFGAIrvmGKO31GxylbOezJZG9YlES9InulI7gNDkeebedlnOQt0UDrxanaJnx749y9sR8mecLyak2RtWa8o8wZKnL4suJWqnVTf1AQz5ImVbUYnZ2pXZKuis1RivQUVLa0+eevHqfa76wmqKNm+yj/WzbZNk8+6CH1jxn1gLEu+206eXd1cr1ZrFpEnk26SD6RUYmbJcyt3TrzkeSvSnxzjPDElf65trhmnJtsgU/IW+2f6vtHnWT8ZUyPhJ8nTp6zV89xkCXWegaCWUxPr5oIVPk2ohVFL4bbi4h7bpvUzyZm367m7IfLU/uHD24x/Dez8/Rp5y06e16/VbZNweEK2b5IXycpW8liQJLmwVPJaHcToXTpO624cnBbeYKmrvJ5ZsWOaG6UBqiXpx8rkqFbNl4TUpY3DwmCtmbd+nDWy88VmTD45sIg0nlFlu72geBaRN6YCdZDK0Sz0zGk58+jywntoDmeYC7Vv9YWFRDj5LfJqSKm5odvjFBX1HeVYnE6ocJSECLVoDd+8qn1182Ppj+hCs+CkziWnAqswFH6xDJtdJEreDvNd8gjWE1L2WBaJkDEdgBdxV1iHvMh5Z3obptnJuu2ZmId84Tmjy4zaI+B7CREsGJUhggGjMkQwYFSGCAaMyhDBgFEZIgC4xj9jW1uv0OTqJwAAAABJRU5ErkJggg==" InformativeScreenshot="94beebbb26914612d158f2f0562ea811.png" ScopeSelectorArgument="&lt;html app='msedge.exe' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                               </uix:NClick.Target>
                             </uix:NClick>
                           </TryCatch.Try>
@@ -616,28 +658,22 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                 </ActivityAction.Argument>
-                                <Sequence sap:VirtualizedContainerService.HintSize="502,1103" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <Sequence sap:VirtualizedContainerService.HintSize="500,939" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="440,813" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,403" sap2010:WorkflowViewState.IdRef="TryCatch_16">
                                     <TryCatch.Try>
-                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Fluxo de Trabalho'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reaberto'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
                                         <uix:NClick.Target>
-                                          <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-3558" CvElementArea="1284, 310, 182, 40" CvTextArea="1296, 321, 137, 17" CvTextArgument="Fluxo de Trabalho" CvType="Button" DesignTimeRectangle="1297, 318, 136, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Fluxo de Trabalho'" FullSelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' type='' class='dropdown-text' aaname='Fluxo de Trabalho' check:text='Fluxo de Trabalho' /&gt;" Guid="36768a29-0ed6-4c46-b9c6-37b344756682" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIwAAAAbCAYAAACuo2fFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMnSURBVGhD7Zi9alRRFIV9KJ9AsFd7tbBSsBMhlWKprW1KwUoQRJCAhTZiiiCIadQqWIhC3uDKN7DCnpV97twzdxgGs4uPzNln/5+VCXrpz9/ToSimUoIpuijBFF2UYIouSjBFFyWYoosSTNFFCaboogRTdNEtmP0Xb4brt/eG7z9P0vtdgh7plZ6z+12A3u4+fDac/Pqd3vdwePRtuHLj/vDu/efFWfPrvAmWBEPTNH/56p1zaOkXTTB6hGwnYk7+/0Iwj57uLzlFLppgnE3PX4LZIUowJZguSjA7KJjWAmmS5hkCH/7Wx8ZVy5clX9HzOPQdY1++OljEkzP6eQ2/HwNf7wkbc3z89GUxs+bWXawV72Ls1+Mfi7zyy+ZelWtMMDHW4wR+Y/lhK4LhTM4oDo9Tbc9FXGtAkYlPy2JwasmXfLGGlhx9xsjmxXbt1t7w4PHzs/qAD/Wizesr9ua9J2e2bBdTcmkWF8yqHcjmeyaGWOWDVDBSmIiJfGF+Fi4YNY+/PsdG+JzlUU8MFO2RVqyLwRcqWjNkZL7YfNkt8EEg8m3FakfqPcNz8TPOpxy+O/fzPBFi4y/i1r5hZMM3q8G5VbdVQ7Rifen8jMOLrNcWWS+r+iO//xLqsVo9td5iLJcLQfPrLKbuBYiNu9mqYIDc7r+qbqsGjMX6YvDxZYu5gskWrgeM/v6orVifa0ouP2t+nUW2l6wH8HecLRgSxrPwQtHG15/X4Nyqmz1SpBXri2k9Tg9ZL1ne1i79UVs9KZ77qbnWFUyrB9CbbVQwMaEgR7THJn0w8LxinZ4E+fn24F7nrNceslrYfOGtvvGlJ83OOesp7mhqLt+rdq6ziG/BmfvWXqgZZ5stGBWPSWnAv+a9sOdR7WhTnNucrAfZomBaNeiRf4LrPIb3LVusLbx3PagLhnPWe7RNySWbzsqjs5BdewHyu2i4d9tswUBsHoinSRXLmsmWAvgqD2QPkaF8iuPz4dHxucWA1/B5xsjmx5b1qX2qDp/1fzVRMNhfv/2w1JO/wZRceod1BAOcYw/ZXpYEUxSrKMEUXZRgii5KMEUHp8M/5ge+Dtm8kLIAAAAASUVORK5CYII=" InformativeScreenshot="545cbfc1461cda514d624816b5fbe8c4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
-                                            <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                <uix:Target CvElementArea="1284, 310, 182, 40" CvTextArea="1296, 321, 137, 17" CvTextArgument="Fluxo de Trabalho" CvType="Button" DesignTimeRectangle="1285, 312, 180, 38" ElementType="Text" FriendlyName="'Fluxo de Trabalho'" FullSelectorArgument="&lt;webctrl id='opsbar-transitions_more' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='opsbar-transitions_more' tag='A' type='' class='aui-button  aui-dropdown2-trigger' aaname='Fluxo de Trabalho' check:innerText='Fluxo de Trabalho' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALgAAAAqCAYAAAAAnZGPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARsSURBVHhe7Z25a5RRFMX9o8TGThCLNGoRRFALDahgoaiQQiIWFtqI2MZCEKwEcUERLFRUFBEXEncEl5iYuGGjzTNn9ISbm/u++WZxMnmeCz9m3nKXd9/JlzBFZlmSyQo2CVxWtEngsqJtTuDTM1+FWNJ8+/4j/fz166+i/5gELorDilwCF8WBJzlNAhdFQpPARZHQJHBRJDQJXBQJTQIXRUKTwEWR0CRwUSQ0CVwUCU0CF0VC++cCHz19Ia3bMpxevn4XrvcTqBG1ouZovR9AbTv2H03vPkyF661w78FYWrV+V7py7W5jzPNzvJShdSRwNBnNXr566wIokv9N4BRN1BPSSXwJvB60rgh85MhouA7+N4F7un3+EgX+cXImTUxOh2vg/cSn9Gn6S7iWgyaBGyTw3gv8+au3acPQSFozuCfduvt43hpEfXL2vCvWDKXDx06lyanP89aroEngBgm89wJ/NPYyDWzc1/jTzYrcihtruw8cn33Kzyzwz0HrucBzF46motloOvbgULbRzOUvl3tJK2JC3db3zNmrDX/EtPt8Dr9eBfb6mjCHc9y487BxZp6bazaXXbO+T8ZfNeJyX3TuZrGqBG59vR/Bvqr4dbl49XZaObC9EQMiv3P/yTxxD247kJ6+eBP65qD1pcAxRkwrZu/H3D4W/Jo1Ovph4eWiocjFvYhnc1AUdk8V0Xkxt3bzcNp78MRcfoA9yGfnfH76btp5aG4u6kWdWDyLF3izHnDO9xk+8GW8VrAit0DcY89ehz5V0LoicF+UPbi/YD8mXuBsNvbzvW0c3kdxWBMuwM5bcr5evF4AJHeGiGgv5rw4cmAPBM29OV/2iLVH+Fh4tedjDN87v8/HscDXPjhawYu8XXEDWt8+wTmHvVEOjHN5czlIzteLBK/RZUW15ohqaVYf4tsHBqC4cjXl7qIqlhcuz88xqdsXAN+6vfHg7+7zl282RN6JuAGtrwUOENvvb5Y3lwNU+fqLxB4vDtKpwCOBUHB2vxdhztefq04sP+b5OSZRX6IaQO4eWwEfC+Kjw2itLrSeCxwNsGMSNYZz+HXoc2CcyxuJypLz9ReZE1MrRLVEcXO99CLM1UR/rNeN1a7AczUA3lknAu8GtEUReNQAxLDztqn+IoCPS9qpiSA+ns5Y57jTy4pyYc4LJFc39qImnh3jqCbbo7qxfF/Zc46JvQuMsZ7rC3L6sy0GtJ4LnM2yTUDD/K993ygfh7ntHP38nCeqgXNW4LkcqBEfKXJcha+bczY38bVTgF7gGEe127k6sTjHMeNwTDjPvgDE9yLHup9bLGg9FziwzQbwR1PZnKh50SUC7GUcEAkngvHoh/f3HowvuEjgc/jzVBGdH3NRnewn8+A9Pyu3Asf8uUvX59Xk76BOLN5DOwIHGNsaWunLv4bWkcCF6FdoErgoEpoELoqEJoGLIqFJ4KJIaBK4KBKaBC6KhCaBiyKhSeCiOPT/wUXR6BseRJFUfkePTFaiSeCygi2l36Omst0w5fKhAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
-                                              </scg:List>
-                                            </uix:TargetAnchorable.Anchors>
-                                          </uix:TargetAnchorable>
+                                          <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-16087" DesignTimeRectangle="531, 257, 58, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Reaberto'" FullSelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' type='' class='dropdown-text' aaname='Reaberto' check:innerText='Reaberto' /&gt;" Guid="016157a0-16ac-4a77-80cd-c78e6d457b0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAXCAYAAABTYvy6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMuSURBVFhH7VY9ayJRFN1/kd8g21hZpYlNSCFBIRIQJJgUa2MKBwRJY6NgCCEwEBADwUJTRAgMKSaFUygSgkEYcBGmcFPkd5w9b958abKaDUk1Fgfk3fvufefec+/4Y/byijBiTTxsWBMPG9bEw4Z54nodGz8TASQRPzyHNg74fBKjZoHxCmh8QayvwLvEcxcP6GpEq47dKAuwrcII+n0C30Xc1M+RS5Rw/Z9x3yVe0f2zYTP/JQ/+LuKfjbua+OUBz0poT5yz8QNqhxlExSjEMlRHH1PHdzq4Q8W1cUxiWRW6JW3eA3sGzrJpROgTTVXQGFherpn1iIZyhJhQWTSNXeUOQ8emlUXMKho3J9ihfa9pOmcBZDsYOXGuy0XEY/I8ul1ETfvt5yE+IPUkdkjOtlsGKtsJRLJX0McWht0K4iT460YGHbWqqHUfMZq4NvqWDWmziacR3z+Bqj9jNLiFwlgbW3VodnFMNLJJjlUF7ScLo94VMiQYP5W5XZLx8gNM8Rb7PRaMS6HIPNSeBXPyJxCHeTS+5cmAepyhT4YNFXZ5d8VyO0JN9ys1aonHF3Htdv/FQjtPP7fScxAP8G0u8VrP95myOEIZtsKYO7Jg10/T7HwdOn9L4gHlOXgjdTtOEormk5y99FHb4n3l3lPnEqk/O5VzO+JX/Q1c4hwDtVzCXuLAk9k88YVZDOST9kBMD8zv5Za/vfvEYlzZnMWZn2+COFs+49Y9CpRbxKmUDMoNSimalLMPVpe+Cn03lVsYHAPTEoXzk8kHHkAd+PnMVpFnTpftTmWosHdi0/ejxJd13B07gZXLTZAVElQ0LqFxR87dcQuaTf4ZWrPKmaWvsPHuplhIExNGS874PPEkovt1tAcmhrqKnFBFqiUXmLs/UtJuihhdFbUb037HP4nbzUij0HqErhnMRZJid3gz3ufClDMeHKOVxIXk1ZQIxFmj5KeDDgopuZXlH5wquna1LegXBW8j5y7vuL35e1HqWge5TY4Q78ayC3+Ogl8MYU+VuLSWd3xm9XG2L+Jxe+dvpZQnga+DHYdfDy6/4L154iHCmnjYsCYeNoSU+Cv+AngEue0C2yO7AAAAAElFTkSuQmCC" InformativeScreenshot="de0261dd4d44db614d87f28572908a4c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='[CCRD-16087] PRIORIDADE EM ANALISE DOS DOCUMENTOS - Sicredi - JIRA' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                         </uix:NClick.Target>
                                       </uix:NClick>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="406,431" sap2010:WorkflowViewState.IdRef="Catch`1_16">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_16">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -665,15 +701,14 @@
                                       </Catch>
                                     </TryCatch.Catches>
                                   </TryCatch>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Reiniciar Atendimento'" sap:VirtualizedContainerService.HintSize="440,166" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="5" Version="V3">
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Reiniciar Atendimento'" sap:VirtualizedContainerService.HintSize="438,166" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="5" Version="V3">
                                     <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-3558" CvTextArgument="Reiniciar Atendimento" CvType="Text" DesignTimeRectangle="1257, 439, 171, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Reiniciar Atendimento'" FullSelectorArgument="&lt;webctrl parentid='action_id_221' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='action_id_221' tag='SPAN' type='' class='trigger-label' aaname='Reiniciar Atendimento' check:text='Reiniciar Atendimento' /&gt;" Guid="cdd5308f-d4b3-4ce9-b264-6d6227a63cb5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK8AAAAbCAYAAAAKyd8WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQ1SURBVHhe7Zg9bhRREIQ5GzeAC+ADGGKcmxRSOAABEmQEiABBBCKBAAkC/gJIQSIBokXfymUV5e6ZNWDjsd8njXbfm37d1TW9y+Jzq8FgoYzhHSyWMbyDxTKGd7BYxvAOFssY3sFiGcM7WCxjeAeLZQzvKeHL12+rrcvXVvfuP97bOf3sD+/3Hz9XO7s3V+cvXvnturC1s3r74dNe1Gb8jZE3bt1Z60DPJlCDWtQ8avABPw6j77ioPD+sl0vjwPDSsIMZDPHzF6/3duY5rcNLrUvbu+ur+0AT8z8GZknDK62HmamK2eHt9s8a8uHJ05fr1+6DeZKG96RybMML7J314cVofcNPDegY3nmO/Zs3TWHtv439fmWkPgD63VidA2Ly4UuD15NOzmuoRGrL3+2855/+V2/e7+dNHYn0g3pw87Ovqi7n/b6f9wfq+jOHyFwPHj0rPXcvuceavl0rNdNjPyekUTHpu3zl1fV5XOrmYk9MPetkdnhZp8jc04OTcWoyjUSIm4Jp7PlDJM5jlCv3bt99uH5PDdfCKzkUC5VeTN6+er0cjEQapLPzCjQgXl/xvp+9qwZ76Ztrr3JNnfU47uUzIIZnhx+pxfvLZwypTTHe15RexQid97qK9fPiwPBS2K+uQO7TlBpRwalGQTVdLO9daK4Tr9uBZv9PlnpwfVPQa9bo6rKfejlPPdUX3ps8cy8g/a60QNVTese91KFzWTf7q56DNKtmpQGyf51TT4IaqQOUN+Pbb16t0yiEZRPgArMp6ISx5/l8XeVJuJcaAT3dB7EzoyJ9EV2Oyp+ud9euXjNfetDlqrwizrVU2qpzsIm29AZP/EtCpFdVvq4GdM9g8meDEvoe73ModP3r4e0GxHGTQWeqPeVhXZlcobNVv1yuHXJA5Gt1lks65Vn26l4qV+Wjx4n0NrVBdQ5YS9ucB9LT+arz6q3qNWOcru/Z37w0QVIJqgxIOiMzN7Dn+XxdNZm4yV0PaQzrTYfX8yfpDVT+dL07Xa/pZZcr44A411Jpq84Ba/XdaUs6X1nPDe9Uje65zg6v9tU0yfOBJZUhnelpsK87TY6b3MUTwzeEjOlMTubqV33y3vsB19jRPbys0eXiHD26lvS20lb1AF5nzgfR+cp6bninauR5MTu8IGN4VVwaSAH+XAOVIeStcrPnhuZawv0s+bu/NhDna53/k+H1vjtSL7H54ZYfHgfEKrdispb25WWVS3tHNbyArswPPAfFdL6y9uGjPjr8mYLi8lmjI2Nho+HVPW+GOJrR5fdUMI2scrPnhuYalM/ryYg0WVoVx3v9XVNnOpMTtHjuCj3UfDDs+RCnLmlTn+pReUTlZfrB+3cfPx+ISy+552uo8kP6Chou78HPdb7qnPcm37h8LrK3rOHsD+9gsDTG8A4WyxjewWIZwztYLGN4BwtltfoFlWKAeahX0hEAAAAASUVORK5CYII=" InformativeScreenshot="f19410e7309b8ec773c4a37dc2565c2b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CvTextArgument="Reiniciar Atendimento" CvType="Text" DesignTimeRectangle="1244, 432, 220, 38" ElementType="Text" FriendlyName="'Reiniciar Atendimento'" FullSelectorArgument="&lt;webctrl aria-role='menuitem' parentid='action_id_221' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='menuitem' parentid='action_id_221' tag='A' type='' class='' aaname='Reiniciar Atendimento' check:innerText='Reiniciar Atendimento' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOAAAAAqCAYAAACqXlczAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAWVSURBVHhe7ZvPa9xVFMXjv+bWhShduBGDIC5s7UICCXShUoVudFfsKkXsQtGdiCiIIkQRNS4KCW1STZvEtLWtTVN/bPL0xDnherxvJj9m5n1Nzge+zPe9733v3XvuvTOZNJ24d/9BWbmxUYwx42PhykpZ2/iluAGNaYAb0JiGuAGNaYgb0JiGuAGNaYgb0JiGnL8wW2bfvuQGNKYF/gQ0piFuQGMa4gY0piFuQGMa4gY0piFuQGMa4gY0piG7DTjx+Jflkcc+7U2b48Tde5tl8tRr5YMPP+/NmHEhn4CLven98fsff5aZs2+VR5988V/XE5MzZenH1Z7V3jhMMbx54d0dP+DPXsAZOAtnjhroAD3249+4yDTfr5bmYMzPXy5LV5cP9yMoGxBJiyChaMRv5hd6M4M5qg2Is545eXbnqr0pwaZF0f+fGpC+7qemusxzp18tL0y9PpoGrM0fN6jDF1/9sPNae3PpUgN2laPWgHOj/AQEmDvuDYhi4SdtvyZzAw7mqDXgiWfPlKeef3m0n4CaWIzjd8X4PCsGNjG/R2XrAGy0gOlDPI9+Yj0bg6hv+j0W9/gx8vLitd191Q+F/gPGEAtI48rOxfr4PK6PRRn91z2I7vXxZ1+nmkct8QxjxB19xZmqcVxH6CNtVHfqitfoX7RTv3FhjvTLdVcZaQNirELrHIuPyWeitBggZkwsEo+5WIiwizbcS+cuvf/Jzj3OiL7gFXvQFmT+olBOTr+RFrdCH+hnTSvAIo/n0z7Oa+w8A3OqW/Q926vf2miHZ5oD2CB30EN9ifFpjoH6RpsYVz9/aUO4Pp5L27i+a0wOswEhXrxqIuk8EsNkULR+yQI8MwqO+yi2jpV4bg34HH9xwhiif/1ArHpG7VzMq79Yj/N4PomxUbOoBVC9M19AFpNqh2fqB9fpuRpflgf6zDMzH4DGz3WMieAM9QNwX7XvCnOz58rTw/4E5FiTDXE1ESCKrIkBNXExF/eL42wfBc/URwB/am8m+0mo6kJqe2T61GKPvjNW3U81qO2VaQW76EvmW7YO7MU31QaaxDc6olpl+9XOALUcdIWFxe/Le6+M4EdQihLncK+FzWvYDVgr8kgsFMA12Rz3wTgrlAyuzeLFFX0HWuTUNVuLi35SM401asm9Mh2jHVFt1TeQrQMY07dBGtCfmq5cz9iyWNUm0i/uLnBx5kyZvvjtaL4DIhEQhqJmSVRqxZAJiLm4XxxniVJiodRi0ORivNcGjPsrqg3I9KnFHqnFqlrW9lI7ALvoS+Zbtg5gzLhrvik1XTEe1ID9zqjltStMnvuoLB32b0FrQXKeiYNAWnRKltRa4WiRxHHNp0gslJo9bPBOzeTWCkUZdH4WJ+5jPCD6WKNWgHpGbS+sQ4zRF9U28y2LAcRzBulAarpiPKgB+52h67vGO98N4Y+x+wnA5OKVdloEEAm/CgdZUrFvtjfmYlHomOLHtdi/9ltQ2MUx1x+kAWPcNdRf2OobFPWIdgC23Js2ehbnqWW2F+dG1YAAfun+AHmgTU1XjGMD4Xz4EXMKaKe5hh9q2yXmhvG/IWqiAD6LCYEdEsIrPqNoWgzZ3piLRaFjwP3ieUymFgp9pR3u+e9eXFMrFAW+xL0zWJhaXJiLjah+0TfGyRi5D8m0VD1wv/zT2n/sVEs8i2OQ7Q9UV8AGiTHEdTVduS7GRt1wxbrQ2PSMLuL/jmRMQ4byt6DGmIPhT0BjGuIGNKYhbkBjGuIGNKYhuw346+aWG9CYMYMGXL/Za8Drqzd708aYcbB49bob0JhWuAGNachuA95/8LDcWLvVmzbGjINTp6fKS1PT/zTg6vrtsr293XtkjBkl6LUry6vl51t3ysTm1m9l4++bza2HvcfGmFGydmerXFtZLxu375a/AGm9GqLztS1NAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
+                                      <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-3558" CvTextArgument="Reiniciar Atendimento" CvType="Text" DesignTimeRectangle="531, 427, 137, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Reiniciar Atendimento'" FullSelectorArgument="&lt;webctrl parentid='action_id_221' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='action_id_221' tag='SPAN' type='' class='trigger-label' aaname='Reiniciar Atendimento' check:text='Reiniciar Atendimento' /&gt;" Guid="cdd5308f-d4b3-4ce9-b264-6d6227a63cb5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK8AAAAbCAYAAAAKyd8WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQ1SURBVHhe7Zg9bhRREIQ5GzeAC+ADGGKcmxRSOAABEmQEiABBBCKBAAkC/gJIQSIBokXfymUV5e6ZNWDjsd8njXbfm37d1TW9y+Jzq8FgoYzhHSyWMbyDxTKGd7BYxvAOFssY3sFiGcM7WCxjeAeLZQzvKeHL12+rrcvXVvfuP97bOf3sD+/3Hz9XO7s3V+cvXvnturC1s3r74dNe1Gb8jZE3bt1Z60DPJlCDWtQ8avABPw6j77ioPD+sl0vjwPDSsIMZDPHzF6/3duY5rcNLrUvbu+ur+0AT8z8GZknDK62HmamK2eHt9s8a8uHJ05fr1+6DeZKG96RybMML7J314cVofcNPDegY3nmO/Zs3TWHtv439fmWkPgD63VidA2Ly4UuD15NOzmuoRGrL3+2855/+V2/e7+dNHYn0g3pw87Ovqi7n/b6f9wfq+jOHyFwPHj0rPXcvuceavl0rNdNjPyekUTHpu3zl1fV5XOrmYk9MPetkdnhZp8jc04OTcWoyjUSIm4Jp7PlDJM5jlCv3bt99uH5PDdfCKzkUC5VeTN6+er0cjEQapLPzCjQgXl/xvp+9qwZ76Ztrr3JNnfU47uUzIIZnhx+pxfvLZwypTTHe15RexQid97qK9fPiwPBS2K+uQO7TlBpRwalGQTVdLO9daK4Tr9uBZv9PlnpwfVPQa9bo6rKfejlPPdUX3ps8cy8g/a60QNVTese91KFzWTf7q56DNKtmpQGyf51TT4IaqQOUN+Pbb16t0yiEZRPgArMp6ISx5/l8XeVJuJcaAT3dB7EzoyJ9EV2Oyp+ud9euXjNfetDlqrwizrVU2qpzsIm29AZP/EtCpFdVvq4GdM9g8meDEvoe73ModP3r4e0GxHGTQWeqPeVhXZlcobNVv1yuHXJA5Gt1lks65Vn26l4qV+Wjx4n0NrVBdQ5YS9ucB9LT+arz6q3qNWOcru/Z37w0QVIJqgxIOiMzN7Dn+XxdNZm4yV0PaQzrTYfX8yfpDVT+dL07Xa/pZZcr44A411Jpq84Ba/XdaUs6X1nPDe9Uje65zg6v9tU0yfOBJZUhnelpsK87TY6b3MUTwzeEjOlMTubqV33y3vsB19jRPbys0eXiHD26lvS20lb1AF5nzgfR+cp6bninauR5MTu8IGN4VVwaSAH+XAOVIeStcrPnhuZawv0s+bu/NhDna53/k+H1vjtSL7H54ZYfHgfEKrdispb25WWVS3tHNbyArswPPAfFdL6y9uGjPjr8mYLi8lmjI2Nho+HVPW+GOJrR5fdUMI2scrPnhuYalM/ryYg0WVoVx3v9XVNnOpMTtHjuCj3UfDDs+RCnLmlTn+pReUTlZfrB+3cfPx+ISy+552uo8kP6Chou78HPdb7qnPcm37h8LrK3rOHsD+9gsDTG8A4WyxjewWIZwztYLGN4BwtltfoFlWKAeahX0hEAAAAASUVORK5CYII=" InformativeScreenshot="b8905d4415c3c18e5abfc0eb30714718.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Em Atendimento'" sap:VirtualizedContainerService.HintSize="438,166" sap2010:WorkflowViewState.IdRef="NClick_48" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-16087" DesignTimeRectangle="531, 257, 107, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Em Atendimento'" FullSelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' type='' class='dropdown-text' aaname='Em Atendimento' check:text='Em Atendimento' /&gt;" Guid="016157a0-16ac-4a77-80cd-c78e6d457b0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAXCAYAAAAFtBHMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVGhD7VY7TypREPaf8BP8CZT2t6G03NLkNlY2NNoYEhttjAUFlbGggAoKCiiMJBgDmKDGLVY0AuERFEK+O3Meyy4cHlE0d5Od5Et2Z87ZnZlvzszZ2vpzjRABhVEZIhgwKkMEA0ZliGDAqAwRDBiVIYIBozJEMOB7yQ0xL0NceNdsANHCh/x0v4s9g/3HoeKs5ujZeka+NUG77iBiWvs/w/eignLq70gVNBzsetd8GzVcNakkWiMqiwmKSb89lhug/TlC/tyv3yi85B28ofpJ/thviJrW/gL2b0YU8xcOie/FG5RXv0mcdODQP8ppB0VOGlW81753Oybr+PfIM9l/GRc2e/OT5J130SZb+/YdmeZErMPnBzLnd9i7+aBfS2k/vGJndq8Hu1RlwAAJek488A75zDYZhEd0W42/IN9kUqW0mx3sWXKPS3a2LU6QkP4Ap/HpP3fSXTxqG/t8K9u2jJNOHr/QyRPrvxTnPRL0Td4npM/rK8K23D9q2X2l06L8iJy9o9yaxszfzKfv1f8UfC+KPJ/oBKqggBHKORv73N749ZPmBSXzMPlKs4MV861wClucNlDgYr6kB7wB5awMdDveQKIugy2mG4gd1RDhmcQBUgKvkg1Y2Z747/DhRXxDJoekP0Qq+YRDnWCyi3+qk872q8sn8rsHRyVxGXnrx1lRPkzwWLIRO3tFUfhLRUkFtty/CqJHDTFGAIrvmGKO31GxylbOezJZG9YlES9InulI7gNDkeebedlnOQt0UDrxanaJnx749y9sR8mecLyak2RtWa8o8wZKnL4suJWqnVTf1AQz5ImVbUYnZ2pXZKuis1RivQUVLa0+eevHqfa76wmqKNm+yj/WzbZNk8+6CH1jxn1gLEu+206eXd1cr1ZrFpEnk26SD6RUYmbJcyt3TrzkeSvSnxzjPDElf65trhmnJtsgU/IW+2f6vtHnWT8ZUyPhJ8nTp6zV89xkCXWegaCWUxPr5oIVPk2ohVFL4bbi4h7bpvUzyZm367m7IfLU/uHD24x/Dez8/Rp5y06e16/VbZNweEK2b5IXycpW8liQJLmwVPJaHcToXTpO624cnBbeYKmrvJ5ZsWOaG6UBqiXpx8rkqFbNl4TUpY3DwmCtmbd+nDWy88VmTD45sIg0nlFlu72geBaRN6YCdZDK0Sz0zGk58+jywntoDmeYC7Vv9YWFRDj5LfJqSKm5odvjFBX1HeVYnE6ocJSECLVoDd+8qn1182Ppj+hCs+CkziWnAqswFH6xDJtdJEreDvNd8gjWE1L2WBaJkDEdgBdxV1iHvMh5Z3obptnJuu2ZmId84Tmjy4zaI+B7CREsGJUhggGjMkQwYFSGCAaMyhDBgFEZIgC4xj9jW1uv0OTqJwAAAABJRU5ErkJggg==" InformativeScreenshot="94beebbb26914612d158f2f0562ea811.png" ScopeSelectorArgument="&lt;html app='msedge.exe' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                     </uix:NClick.Target>
                                   </uix:NClick>
                                 </Sequence>
@@ -681,7 +716,7 @@
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Concluir'" sap:VirtualizedContainerService.HintSize="542,166" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Concluir'" sap:VirtualizedContainerService.HintSize="540,166" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-3766" CvElementArea="926, 364, 180, 40" CvTextArea="940, 376, 151, 17" CvTextArgument="Iniciar atendimento" CvType="Button" DesignTimeRectangle="941, 318, 64, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Concluir'" FullSelectorArgument="&lt;webctrl parentid='action_id_161' tag='SPAN' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl parentid='action_id_161' tag='SPAN' type='' class='trigger-label' aaname='Concluir' check:innerText='Concluir' /&gt;" Guid="a08dae70-31f3-4ea6-82e5-c7a1125a9136" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAbCAYAAADFyymQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG8SURBVFhH7ZWxSsRQEEX9KH/AwlbxA7QRSxubBVtBsNlOBAuxtNJOsFIEGwuxECy2EG32M55c4eq8y7zd+JJsEKc4hCQ3M/POvmSX3j6mKfghhAghRAghQggRQogQQoQQIoQQ4c8IuXt4Sisbu+nq+t693xVFIc8vk7S+NUrLq9sZ+4enbr5vaoVwHcdnl+59xRWCRWPx2hxDHYzPs2uLYjAheBAFUEjvDckgr8yimtYwiBDsjp29o/Q6ec9CJZBDftY3BgtZ2xx9HfkqgtIuxAy2HnMqBEec47p9XnPeK4M5ADI6y7cQLk4XVIKNbZ7NrVTm0JhDspfKRy1d5Pjkohch+JG872G1EOS8rA7EczsQ0AWVFki0bimvuZIQuyssVULYhE0tWgcD8pWxOR0ced0xFs23FVLqlX1D5g1FtKmlRog+46E92wop9cqElJoofe2Q3whpWreVEC5m3i6Z9YvWDo6BMTgWYHPEq2vPCerYD3grIYAFvOHQhIU4kC3MZ+015JoIoWTtW/qX8fLMdCqE0LTCRoDN7H3bGDQVQjCorcfBvbz2h6Cb28cs15mQ/0oIEUKIEEIypukT+BXtEYId8VEAAAAASUVORK5CYII=" InformativeScreenshot="93885fd56dbeaa656fc5da1b3a332eb9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='[CCRD-3766] Prioridade em processo contemplação de bens moveis - Sicredi - JIRA' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -692,8 +727,8 @@
                             </uix:TargetAnchorable>
                           </uix:NClick.Target>
                         </uix:NClick>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="542,101" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Fechando chamado&quot;]" />
-                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe Concluir'" sap:VirtualizedContainerService.HintSize="542,578" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="a8215226a9472822e73bd5ae947030df" Selector="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;">
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="540,101" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Fechando chamado&quot;]" />
+                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe Concluir'" sap:VirtualizedContainerService.HintSize="540,578" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="a8215226a9472822e73bd5ae947030df" Selector="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;">
                           <ui:BrowserScope.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
@@ -746,7 +781,7 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="671,4334" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence sap:VirtualizedContainerService.HintSize="671,5321" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -762,22 +797,16 @@
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="609,101" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Retorno Argumento Analista = &quot;+analista]" />
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="609,403" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="609,1430" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <TryCatch.Try>
-                            <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Iniciar atendimento'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="10" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Em Atendimento'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_49" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
                               <uix:NClick.Target>
-                                <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-3766" CvElementArea="926, 364, 180, 40" CvTextArea="940, 376, 151, 17" CvTextArgument="Iniciar atendimento" CvType="Button" DesignTimeRectangle="941, 318, 150, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Iniciar atendimento'" FullSelectorArgument="&lt;webctrl parentid='action_id_41' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='action_id_41' tag='SPAN' type='' class='trigger-label' aaname='Iniciar atendimento' check:text='Iniciar atendimento' /&gt;" Guid="8ce01f14-3119-4b6c-9558-8a043640a5d9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAbCAYAAACEE5ZqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOLSURBVHhe7Zi9ihVBEIV9KJ9AMFdzNTBSMBWMBENNNXNDwWSNTEQwMRENRBBN1EgMRGHfYORbOMu5h+7Z3l1n9scKPu6d7qrqU9Xn7qDnfv/ZmYpiacpoxSqU0YpVKKMVq1BGK1ahjFasQhmtWIUyWrEKZbRiFcpox8TL1++mC1duT+8/fG7unzU2jPb1+4/p8vW709bTFxtBI9x7sDXdvPNw+vHzV3M/YcAMmoG39s86abSzPo//2mjq9zg0nCajoe3Stbt7Wg/DPzPaaeQkGe0kU0Y7ImW0MVYxGt95JX768m137/zFG7vwqvTc1quT76wpx/MQna8KzvLYvAg1/Obtx726cz+KuXro8D3wnjQL7fGdNe1LC59eK+N6tZ49f7Whh0+fh3J49vqaMetaA5+jUM3M1T51IeM009b9+T5kb7kvhoxGMusaoIR5HIK9EdXKtcdb2xs1fLDUyEHkuVzu1Vv3d78rrsVIPT55zkvq9deaAbNRvi7Ge27VkklYVx+K83lwntdXDP37GdT2WqAz5rTREzG+lnlA3dZfNMV6b9JIbY8dMlo2ARRK0XPPiQR5Q0k2qBzXdxCyXs9oLe05m54Wavm8qAUeAzlX1ZMWnZe5PHuex0oLutGfuXkG++SRr5hWLnlpNMW17iJnAMOvzjQM6y4SYYpr1UmyacEzvxJHMb2cOebqSafXa61BXkBr+FqXxl4tYM0vI3vr5ebcPVbz7mnLOHpxQwm/S55b9XpnQJ4DixiNw/czRMbo2Wu2YnrNJSP11K/rVEyaUxzEaHmewxp7ys/YljbIuXus7o2clnahuKMYLfU7qQcW/YuWQ3J8sOSQm03n8FsNtxit19I5oh16WvyMuVqs+UWNaIOcu8fq3nraEuaTM9L6fkabOyP1wCJG6120g0ANthfPGfwCNey55pzReurXL3NEO/S0jPQFrC1ltHzugYaeNnSjn+dWr3NnoNl7g0WMxrMG540Q2/tXJ3FeT/uHMRqM1OsZgX1/xQi0e739jMZzq5bWiFN+5nEO+vUscu4e62fw3XsF+n30ZHvvjug7e9e632WrPrR6Ux8Zu5jRQPUQI9R4DpY88hXHd/6/zGPIGTXaSD3QsMCHLn3agxzoiNHAzwDOYY045WeeZud1IOfusa4P8lzweujwnn0975LaqpFzyDmlZtgwWlEsRRmtWIUyWrEKZbRiBXamv4/9D7euBABkAAAAAElFTkSuQmCC" InformativeScreenshot="aa82c1c8eb65f94be330cf394a5e6409.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target CvElementArea="926, 364, 180, 40" CvTextArea="940, 376, 151, 17" CvTextArgument="Iniciar atendimento" CvType="Button" DesignTimeRectangle="928, 312, 177, 38" ElementType="Text" FriendlyName="'Iniciar atendimento'" FullSelectorArgument="&lt;webctrl id='action_id_41' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='action_id_41' tag='A' type='' class='aui-button toolbar-trigger issueaction-workflow-transition' aaname='Iniciar atendimento' check:innerText='Iniciar atendimento' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALUAAAAqCAYAAAD1Yxo/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQ3SURBVHhe7Z0xi1VXFIXzo/wFAXtjrylSGUgrWAVSapt0mVKw0SqNCDY2EosgiDZJKkkREtCQRpsr38C6rFmcc+deh4fvHveGj3n3nL332WfvNW8eU8x8MZWVDWYl6rLhrERdNpydEfW79++nt//9P/3z75ui2BVus6gRdMu5KPaA2yzqeocu9ozbLOqWY1HsBbcSdTEEbiXqYgjcStTFELiVqIshcCtRF0PgVqIuhsCtRF0MgVuJuhgCtxL1jnj4+Nfpy6vfTc9+e9nc/5xxu7Cof//z9fTV17emk7u/NPeX+P72yXTj5p3p9V9/N/cThslQGW5rf3RS1J97Pxy3EvVGdN9PUcOeRE1tV67fmms9NG6fVNR75JhEfcyUqHdEiXodw4ma13ysePHqj9O9S5e/OYWPGx7b+vjBa9YU43E0KH/ccpb75tDV3CdPn895l74Bl/JRh++B30m90B6vWdO+auGr50q/Xq57Dx6dqYev3g/F8Oz51WPWtQbeR6GcGat98kL6qaet+fk+5N1y/2NwO5ioKZR1DUtNcD+a401Trlz76eT+mRw+RHJk0/NchHTt2x9OX8uvxZp8fOU5BdG7X6sH9EbxEoHfuZVLgmRd95Cf94PzPL98uL+fQW7PBTpjqTbuhI+vZRyQt/VOLV+/m2okt/tuwe1gos6GAUVng5aeE13em5dkMxXj9W0h8/VE3ao9e9OrhVzeL3KB+0D2VflUi87LWJ49zn1VC3VTf8bmGewTR7x8WrHEpajl15pF9mArbgf9+JHiZN0bQhPk18qTZIMFz3z3O/LpxSyxlE91er7WGuSwW4PWumrs5QLWfPB5t15s9t191e9ebenHXVy8wmfJcytf7wzIc7bidjSi5qLniS999Ow5Wz69RiZr8um+Xqd88htBbBF1nuewxp7i07dVG2Tf3VdzI6ZVu5DfRUSd9TtZz1bcju6dOgfi+BCJITYbnINuNbfF2nytOtfUDr1a/IylXKy5KNbUBtl399XcerUl9Cd7pPXzRL10RtazFbejEXVPVA7N0BB7/pzBO4sGu9RIZ20+3deFs6Z26NWy5l7A2qFEnc89qKFXG3VTP8+tuy6dQc1+t624HY2oedaQvGn49n77gZ/n0/7HiBrW5OuJjn3/MS2o3fOdJ2qeW7m0hp/iM45zqF/PIvvuvn4Gr/2uwH1//Pn+PCPunXfXus+ylR9ad9M90ncLbkclalA+Li7U5BwiccTLj9f8Ptp9iFkr6jX5QIMBH7Dq0x7k8NaIGvwM4BzW8FN8xql3ngey7+7r9UGeC56POvzOvp6zJLdyZB+yT1nzVtwuLOqiOAbcStTFELiVqIshcCtRF0PgVqIuhsCtRF0MgVuJuhgCtxJ1MQRus6jr71MXe8ZtFnX9J4Fiz7jNosbqf74Ue8XtjKjLykawEnXZYDZNHwDeKc/suxuvGwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
-                                    </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
+                                <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-16087" DesignTimeRectangle="531, 257, 107, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Em Atendimento'" FullSelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' type='' class='dropdown-text' aaname='Em Atendimento' check:text='Em Atendimento' /&gt;" Guid="016157a0-16ac-4a77-80cd-c78e6d457b0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAXCAYAAAAFtBHMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVGhD7VY7TypREPaf8BP8CZT2t6G03NLkNlY2NNoYEhttjAUFlbGggAoKCiiMJBgDmKDGLVY0AuERFEK+O3Meyy4cHlE0d5Od5Et2Z87ZnZlvzszZ2vpzjRABhVEZIhgwKkMEA0ZliGDAqAwRDBiVIYIBozJEMOB7yQ0xL0NceNdsANHCh/x0v4s9g/3HoeKs5ujZeka+NUG77iBiWvs/w/eignLq70gVNBzsetd8GzVcNakkWiMqiwmKSb89lhug/TlC/tyv3yi85B28ofpJ/thviJrW/gL2b0YU8xcOie/FG5RXv0mcdODQP8ppB0VOGlW81753Oybr+PfIM9l/GRc2e/OT5J130SZb+/YdmeZErMPnBzLnd9i7+aBfS2k/vGJndq8Hu1RlwAAJek488A75zDYZhEd0W42/IN9kUqW0mx3sWXKPS3a2LU6QkP4Ap/HpP3fSXTxqG/t8K9u2jJNOHr/QyRPrvxTnPRL0Td4npM/rK8K23D9q2X2l06L8iJy9o9yaxszfzKfv1f8UfC+KPJ/oBKqggBHKORv73N749ZPmBSXzMPlKs4MV861wClucNlDgYr6kB7wB5awMdDveQKIugy2mG4gd1RDhmcQBUgKvkg1Y2Z747/DhRXxDJoekP0Qq+YRDnWCyi3+qk872q8sn8rsHRyVxGXnrx1lRPkzwWLIRO3tFUfhLRUkFtty/CqJHDTFGAIrvmGKO31GxylbOezJZG9YlES9InulI7gNDkeebedlnOQt0UDrxanaJnx749y9sR8mecLyak2RtWa8o8wZKnL4suJWqnVTf1AQz5ImVbUYnZ2pXZKuis1RivQUVLa0+eevHqfa76wmqKNm+yj/WzbZNk8+6CH1jxn1gLEu+206eXd1cr1ZrFpEnk26SD6RUYmbJcyt3TrzkeSvSnxzjPDElf65trhmnJtsgU/IW+2f6vtHnWT8ZUyPhJ8nTp6zV89xkCXWegaCWUxPr5oIVPk2ohVFL4bbi4h7bpvUzyZm367m7IfLU/uHD24x/Dez8/Rp5y06e16/VbZNweEK2b5IXycpW8liQJLmwVPJaHcToXTpO624cnBbeYKmrvJ5ZsWOaG6UBqiXpx8rkqFbNl4TUpY3DwmCtmbd+nDWy88VmTD45sIg0nlFlu72geBaRN6YCdZDK0Sz0zGk58+jywntoDmeYC7Vv9YWFRDj5LfJqSKm5odvjFBX1HeVYnE6ocJSECLVoDd+8qn1182Ppj+hCs+CkziWnAqswFH6xDJtdJEreDvNd8gjWE1L2WBaJkDEdgBdxV1iHvMh5Z3obptnJuu2ZmId84Tmjy4zaI+B7CREsGJUhggGjMkQwYFSGCAaMyhDBgFEZIgC4xj9jW1uv0OTqJwAAAABJRU5ErkJggg==" InformativeScreenshot="94beebbb26914612d158f2f0562ea811.png" ScopeSelectorArgument="&lt;html app='msedge.exe' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                               </uix:NClick.Target>
                             </uix:NClick>
                           </TryCatch.Try>
                           <TryCatch.Catches>
-                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="506,1048" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -788,31 +817,25 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                 </ActivityAction.Argument>
-                                <Sequence sap:VirtualizedContainerService.HintSize="502,933" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                <Sequence sap:VirtualizedContainerService.HintSize="500,939" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="440,603" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,403" sap2010:WorkflowViewState.IdRef="TryCatch_11">
                                     <TryCatch.Try>
-                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Fluxo de Trabalho'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="10" Version="V3">
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reaberto'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_50" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
                                         <uix:NClick.Target>
-                                          <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-3558" CvElementArea="1284, 310, 182, 40" CvTextArea="1296, 321, 137, 17" CvTextArgument="Fluxo de Trabalho" CvType="Button" DesignTimeRectangle="1297, 318, 136, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Fluxo de Trabalho'" FullSelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' type='' class='dropdown-text' aaname='Fluxo de Trabalho' check:text='Fluxo de Trabalho' /&gt;" Guid="36768a29-0ed6-4c46-b9c6-37b344756682" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIwAAAAbCAYAAACuo2fFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMnSURBVGhD7Zi9alRRFIV9KJ9AsFd7tbBSsBMhlWKprW1KwUoQRJCAhTZiiiCIadQqWIhC3uDKN7DCnpV97twzdxgGs4uPzNln/5+VCXrpz9/ToSimUoIpuijBFF2UYIouSjBFFyWYoosSTNFFCaboogRTdNEtmP0Xb4brt/eG7z9P0vtdgh7plZ6z+12A3u4+fDac/Pqd3vdwePRtuHLj/vDu/efFWfPrvAmWBEPTNH/56p1zaOkXTTB6hGwnYk7+/0Iwj57uLzlFLppgnE3PX4LZIUowJZguSjA7KJjWAmmS5hkCH/7Wx8ZVy5clX9HzOPQdY1++OljEkzP6eQ2/HwNf7wkbc3z89GUxs+bWXawV72Ls1+Mfi7zyy+ZelWtMMDHW4wR+Y/lhK4LhTM4oDo9Tbc9FXGtAkYlPy2JwasmXfLGGlhx9xsjmxXbt1t7w4PHzs/qAD/Wizesr9ua9J2e2bBdTcmkWF8yqHcjmeyaGWOWDVDBSmIiJfGF+Fi4YNY+/PsdG+JzlUU8MFO2RVqyLwRcqWjNkZL7YfNkt8EEg8m3FakfqPcNz8TPOpxy+O/fzPBFi4y/i1r5hZMM3q8G5VbdVQ7Rifen8jMOLrNcWWS+r+iO//xLqsVo9td5iLJcLQfPrLKbuBYiNu9mqYIDc7r+qbqsGjMX6YvDxZYu5gskWrgeM/v6orVifa0ouP2t+nUW2l6wH8HecLRgSxrPwQtHG15/X4Nyqmz1SpBXri2k9Tg9ZL1ne1i79UVs9KZ77qbnWFUyrB9CbbVQwMaEgR7THJn0w8LxinZ4E+fn24F7nrNceslrYfOGtvvGlJ83OOesp7mhqLt+rdq6ziG/BmfvWXqgZZ5stGBWPSWnAv+a9sOdR7WhTnNucrAfZomBaNeiRf4LrPIb3LVusLbx3PagLhnPWe7RNySWbzsqjs5BdewHyu2i4d9tswUBsHoinSRXLmsmWAvgqD2QPkaF8iuPz4dHxucWA1/B5xsjmx5b1qX2qDp/1fzVRMNhfv/2w1JO/wZRceod1BAOcYw/ZXpYEUxSrKMEUXZRgii5KMEUHp8M/5ge+Dtm8kLIAAAAASUVORK5CYII=" InformativeScreenshot="545cbfc1461cda514d624816b5fbe8c4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
-                                            <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                <uix:Target CvElementArea="1284, 310, 182, 40" CvTextArea="1296, 321, 137, 17" CvTextArgument="Fluxo de Trabalho" CvType="Button" DesignTimeRectangle="1285, 312, 180, 38" ElementType="Text" FriendlyName="'Fluxo de Trabalho'" FullSelectorArgument="&lt;webctrl id='opsbar-transitions_more' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='opsbar-transitions_more' tag='A' type='' class='aui-button  aui-dropdown2-trigger' aaname='Fluxo de Trabalho' check:innerText='Fluxo de Trabalho' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALgAAAAqCAYAAAAAnZGPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARsSURBVHhe7Z25a5RRFMX9o8TGThCLNGoRRFALDahgoaiQQiIWFtqI2MZCEKwEcUERLFRUFBEXEncEl5iYuGGjzTNn9ISbm/u++WZxMnmeCz9m3nKXd9/JlzBFZlmSyQo2CVxWtEngsqJtTuDTM1+FWNJ8+/4j/fz166+i/5gELorDilwCF8WBJzlNAhdFQpPARZHQJHBRJDQJXBQJTQIXRUKTwEWR0CRwUSQ0CVwUCU0CF0VC++cCHz19Ia3bMpxevn4XrvcTqBG1ouZovR9AbTv2H03vPkyF661w78FYWrV+V7py7W5jzPNzvJShdSRwNBnNXr566wIokv9N4BRN1BPSSXwJvB60rgh85MhouA7+N4F7un3+EgX+cXImTUxOh2vg/cSn9Gn6S7iWgyaBGyTw3gv8+au3acPQSFozuCfduvt43hpEfXL2vCvWDKXDx06lyanP89aroEngBgm89wJ/NPYyDWzc1/jTzYrcihtruw8cn33Kzyzwz0HrucBzF46motloOvbgULbRzOUvl3tJK2JC3db3zNmrDX/EtPt8Dr9eBfb6mjCHc9y487BxZp6bazaXXbO+T8ZfNeJyX3TuZrGqBG59vR/Bvqr4dbl49XZaObC9EQMiv3P/yTxxD247kJ6+eBP65qD1pcAxRkwrZu/H3D4W/Jo1Ovph4eWiocjFvYhnc1AUdk8V0Xkxt3bzcNp78MRcfoA9yGfnfH76btp5aG4u6kWdWDyLF3izHnDO9xk+8GW8VrAit0DcY89ehz5V0LoicF+UPbi/YD8mXuBsNvbzvW0c3kdxWBMuwM5bcr5evF4AJHeGiGgv5rw4cmAPBM29OV/2iLVH+Fh4tedjDN87v8/HscDXPjhawYu8XXEDWt8+wTmHvVEOjHN5czlIzteLBK/RZUW15ohqaVYf4tsHBqC4cjXl7qIqlhcuz88xqdsXAN+6vfHg7+7zl282RN6JuAGtrwUOENvvb5Y3lwNU+fqLxB4vDtKpwCOBUHB2vxdhztefq04sP+b5OSZRX6IaQO4eWwEfC+Kjw2itLrSeCxwNsGMSNYZz+HXoc2CcyxuJypLz9ReZE1MrRLVEcXO99CLM1UR/rNeN1a7AczUA3lknAu8GtEUReNQAxLDztqn+IoCPS9qpiSA+ns5Y57jTy4pyYc4LJFc39qImnh3jqCbbo7qxfF/Zc46JvQuMsZ7rC3L6sy0GtJ4LnM2yTUDD/K993ygfh7ntHP38nCeqgXNW4LkcqBEfKXJcha+bczY38bVTgF7gGEe127k6sTjHMeNwTDjPvgDE9yLHup9bLGg9FziwzQbwR1PZnKh50SUC7GUcEAkngvHoh/f3HowvuEjgc/jzVBGdH3NRnewn8+A9Pyu3Asf8uUvX59Xk76BOLN5DOwIHGNsaWunLv4bWkcCF6FdoErgoEpoELoqEJoGLIqFJ4KJIaBK4KBKaBC6KhCaBiyKhSeCiOPT/wUXR6BseRJFUfkePTFaiSeCygi2l36Omst0w5fKhAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
-                                              </scg:List>
-                                            </uix:TargetAnchorable.Anchors>
-                                          </uix:TargetAnchorable>
+                                          <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-16087" DesignTimeRectangle="531, 257, 58, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Reaberto'" FullSelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' type='' class='dropdown-text' aaname='Reaberto' check:innerText='Reaberto' /&gt;" Guid="016157a0-16ac-4a77-80cd-c78e6d457b0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAXCAYAAABTYvy6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMuSURBVFhH7VY9ayJRFN1/kd8g21hZpYlNSCFBIRIQJJgUa2MKBwRJY6NgCCEwEBADwUJTRAgMKSaFUygSgkEYcBGmcFPkd5w9b958abKaDUk1Fgfk3fvufefec+/4Y/byijBiTTxsWBMPG9bEw4Z54nodGz8TASQRPzyHNg74fBKjZoHxCmh8QayvwLvEcxcP6GpEq47dKAuwrcII+n0C30Xc1M+RS5Rw/Z9x3yVe0f2zYTP/JQ/+LuKfjbua+OUBz0poT5yz8QNqhxlExSjEMlRHH1PHdzq4Q8W1cUxiWRW6JW3eA3sGzrJpROgTTVXQGFherpn1iIZyhJhQWTSNXeUOQ8emlUXMKho3J9ihfa9pOmcBZDsYOXGuy0XEY/I8ul1ETfvt5yE+IPUkdkjOtlsGKtsJRLJX0McWht0K4iT460YGHbWqqHUfMZq4NvqWDWmziacR3z+Bqj9jNLiFwlgbW3VodnFMNLJJjlUF7ScLo94VMiQYP5W5XZLx8gNM8Rb7PRaMS6HIPNSeBXPyJxCHeTS+5cmAepyhT4YNFXZ5d8VyO0JN9ys1aonHF3Htdv/FQjtPP7fScxAP8G0u8VrP95myOEIZtsKYO7Jg10/T7HwdOn9L4gHlOXgjdTtOEormk5y99FHb4n3l3lPnEqk/O5VzO+JX/Q1c4hwDtVzCXuLAk9k88YVZDOST9kBMD8zv5Za/vfvEYlzZnMWZn2+COFs+49Y9CpRbxKmUDMoNSimalLMPVpe+Cn03lVsYHAPTEoXzk8kHHkAd+PnMVpFnTpftTmWosHdi0/ejxJd13B07gZXLTZAVElQ0LqFxR87dcQuaTf4ZWrPKmaWvsPHuplhIExNGS874PPEkovt1tAcmhrqKnFBFqiUXmLs/UtJuihhdFbUb037HP4nbzUij0HqErhnMRZJid3gz3ufClDMeHKOVxIXk1ZQIxFmj5KeDDgopuZXlH5wquna1LegXBW8j5y7vuL35e1HqWge5TY4Q78ayC3+Ogl8MYU+VuLSWd3xm9XG2L+Jxe+dvpZQnga+DHYdfDy6/4L154iHCmnjYsCYeNoSU+Cv+AngEue0C2yO7AAAAAElFTkSuQmCC" InformativeScreenshot="de0261dd4d44db614d87f28572908a4c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='[CCRD-16087] PRIORIDADE EM ANALISE DOS DOCUMENTOS - Sicredi - JIRA' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                         </uix:NClick.Target>
                                       </uix:NClick>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="406,431" sap2010:WorkflowViewState.IdRef="Catch`1_11">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_11">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
@@ -837,7 +860,7 @@
                                       </Catch>
                                     </TryCatch.Catches>
                                   </TryCatch>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Reiniciar Atendimento'" sap:VirtualizedContainerService.HintSize="440,166" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="5" Version="V3">
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Reiniciar Atendimento'" sap:VirtualizedContainerService.HintSize="438,166" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="5" Version="V3">
                                     <uix:NClick.Target>
                                       <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-3558" CvTextArgument="Reiniciar Atendimento" CvType="Text" DesignTimeRectangle="1257, 439, 171, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Reiniciar Atendimento'" FullSelectorArgument="&lt;webctrl parentid='action_id_221' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='action_id_221' tag='SPAN' type='' class='trigger-label' aaname='Reiniciar Atendimento' check:text='Reiniciar Atendimento' /&gt;" Guid="cdd5308f-d4b3-4ce9-b264-6d6227a63cb5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK8AAAAbCAYAAAAKyd8WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQ1SURBVHhe7Zg9bhRREIQ5GzeAC+ADGGKcmxRSOAABEmQEiABBBCKBAAkC/gJIQSIBokXfymUV5e6ZNWDjsd8njXbfm37d1TW9y+Jzq8FgoYzhHSyWMbyDxTKGd7BYxvAOFssY3sFiGcM7WCxjeAeLZQzvKeHL12+rrcvXVvfuP97bOf3sD+/3Hz9XO7s3V+cvXvnturC1s3r74dNe1Gb8jZE3bt1Z60DPJlCDWtQ8avABPw6j77ioPD+sl0vjwPDSsIMZDPHzF6/3duY5rcNLrUvbu+ur+0AT8z8GZknDK62HmamK2eHt9s8a8uHJ05fr1+6DeZKG96RybMML7J314cVofcNPDegY3nmO/Zs3TWHtv439fmWkPgD63VidA2Ly4UuD15NOzmuoRGrL3+2855/+V2/e7+dNHYn0g3pw87Ovqi7n/b6f9wfq+jOHyFwPHj0rPXcvuceavl0rNdNjPyekUTHpu3zl1fV5XOrmYk9MPetkdnhZp8jc04OTcWoyjUSIm4Jp7PlDJM5jlCv3bt99uH5PDdfCKzkUC5VeTN6+er0cjEQapLPzCjQgXl/xvp+9qwZ76Ztrr3JNnfU47uUzIIZnhx+pxfvLZwypTTHe15RexQid97qK9fPiwPBS2K+uQO7TlBpRwalGQTVdLO9daK4Tr9uBZv9PlnpwfVPQa9bo6rKfejlPPdUX3ps8cy8g/a60QNVTese91KFzWTf7q56DNKtmpQGyf51TT4IaqQOUN+Pbb16t0yiEZRPgArMp6ISx5/l8XeVJuJcaAT3dB7EzoyJ9EV2Oyp+ud9euXjNfetDlqrwizrVU2qpzsIm29AZP/EtCpFdVvq4GdM9g8meDEvoe73ModP3r4e0GxHGTQWeqPeVhXZlcobNVv1yuHXJA5Gt1lks65Vn26l4qV+Wjx4n0NrVBdQ5YS9ucB9LT+arz6q3qNWOcru/Z37w0QVIJqgxIOiMzN7Dn+XxdNZm4yV0PaQzrTYfX8yfpDVT+dL07Xa/pZZcr44A411Jpq84Ba/XdaUs6X1nPDe9Uje65zg6v9tU0yfOBJZUhnelpsK87TY6b3MUTwzeEjOlMTubqV33y3vsB19jRPbys0eXiHD26lvS20lb1AF5nzgfR+cp6bninauR5MTu8IGN4VVwaSAH+XAOVIeStcrPnhuZawv0s+bu/NhDna53/k+H1vjtSL7H54ZYfHgfEKrdispb25WWVS3tHNbyArswPPAfFdL6y9uGjPjr8mYLi8lmjI2Nho+HVPW+GOJrR5fdUMI2scrPnhuYalM/ryYg0WVoVx3v9XVNnOpMTtHjuCj3UfDDs+RCnLmlTn+pReUTlZfrB+3cfPx+ISy+552uo8kP6Chou78HPdb7qnPcm37h8LrK3rOHsD+9gsDTG8A4WyxjewWIZwztYLGN4BwtltfoFlWKAeahX0hEAAAAASUVORK5CYII=" InformativeScreenshot="f19410e7309b8ec773c4a37dc2565c2b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                                         <uix:TargetAnchorable.Anchors>
@@ -846,6 +869,11 @@
                                           </scg:List>
                                         </uix:TargetAnchorable.Anchors>
                                       </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Em Atendimento'" sap:VirtualizedContainerService.HintSize="438,166" sap2010:WorkflowViewState.IdRef="NClick_51" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-16087" DesignTimeRectangle="531, 257, 107, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Em Atendimento'" FullSelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='opsbar-transitions_more' tag='SPAN' type='' class='dropdown-text' aaname='Em Atendimento' check:text='Em Atendimento' /&gt;" Guid="016157a0-16ac-4a77-80cd-c78e6d457b0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAXCAYAAAAFtBHMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVGhD7VY7TypREPaf8BP8CZT2t6G03NLkNlY2NNoYEhttjAUFlbGggAoKCiiMJBgDmKDGLVY0AuERFEK+O3Meyy4cHlE0d5Od5Et2Z87ZnZlvzszZ2vpzjRABhVEZIhgwKkMEA0ZliGDAqAwRDBiVIYIBozJEMOB7yQ0xL0NceNdsANHCh/x0v4s9g/3HoeKs5ujZeka+NUG77iBiWvs/w/eignLq70gVNBzsetd8GzVcNakkWiMqiwmKSb89lhug/TlC/tyv3yi85B28ofpJ/thviJrW/gL2b0YU8xcOie/FG5RXv0mcdODQP8ppB0VOGlW81753Oybr+PfIM9l/GRc2e/OT5J130SZb+/YdmeZErMPnBzLnd9i7+aBfS2k/vGJndq8Hu1RlwAAJek488A75zDYZhEd0W42/IN9kUqW0mx3sWXKPS3a2LU6QkP4Ap/HpP3fSXTxqG/t8K9u2jJNOHr/QyRPrvxTnPRL0Td4npM/rK8K23D9q2X2l06L8iJy9o9yaxszfzKfv1f8UfC+KPJ/oBKqggBHKORv73N749ZPmBSXzMPlKs4MV861wClucNlDgYr6kB7wB5awMdDveQKIugy2mG4gd1RDhmcQBUgKvkg1Y2Z747/DhRXxDJoekP0Qq+YRDnWCyi3+qk872q8sn8rsHRyVxGXnrx1lRPkzwWLIRO3tFUfhLRUkFtty/CqJHDTFGAIrvmGKO31GxylbOezJZG9YlES9InulI7gNDkeebedlnOQt0UDrxanaJnx749y9sR8mecLyak2RtWa8o8wZKnL4suJWqnVTf1AQz5ImVbUYnZ2pXZKuis1RivQUVLa0+eevHqfa76wmqKNm+yj/WzbZNk8+6CH1jxn1gLEu+206eXd1cr1ZrFpEnk26SD6RUYmbJcyt3TrzkeSvSnxzjPDElf65trhmnJtsgU/IW+2f6vtHnWT8ZUyPhJ8nTp6zV89xkCXWegaCWUxPr5oIVPk2ohVFL4bbi4h7bpvUzyZm367m7IfLU/uHD24x/Dez8/Rp5y06e16/VbZNweEK2b5IXycpW8liQJLmwVPJaHcToXTpO624cnBbeYKmrvJ5ZsWOaG6UBqiXpx8rkqFbNl4TUpY3DwmCtmbd+nDWy88VmTD45sIg0nlFlu72geBaRN6YCdZDK0Sz0zGk58+jywntoDmeYC7Vv9YWFRDj5LfJqSKm5odvjFBX1HeVYnE6ocJSECLVoDd+8qn1182Ppj+hCs+CkziWnAqswFH6xDJtdJEreDvNd8gjWE1L2WBaJkDEdgBdxV1iHvMh5Z3obptnJuu2ZmId84Tmjy4zaI+B7CREsGJUhggGjMkQwYFSGCAaMyhDBgFEZIgC4xj9jW1uv0OTqJwAAAABJRU5ErkJggg==" InformativeScreenshot="94beebbb26914612d158f2f0562ea811.png" ScopeSelectorArgument="&lt;html app='msedge.exe' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                     </uix:NClick.Target>
                                   </uix:NClick>
                                 </Sequence>
@@ -896,7 +924,7 @@
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="609,2739" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="609,2699" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                           <ui:IfElseIf.ConditionBlocks>
                             <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                               <ui:IfElseIfBlock BlockType="If" Condition="[analista = &quot;CONFEDERAÇÃO DAS COOPERATIVAS DO SICREDI&quot;]">
@@ -1030,19 +1058,19 @@
                               </ui:IfElseIfBlock>
                               <ui:IfElseIfBlock BlockType="Else">
                                 <ui:IfElseIfBlock.Then>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,862" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,822" sap2010:WorkflowViewState.IdRef="Sequence_43">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="496,740" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="496,700" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe Concluir'" sap:VirtualizedContainerService.HintSize="434,618" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="a8215226a9472822e73bd5ae947030df" Selector="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;">
+                                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe Concluir'" sap:VirtualizedContainerService.HintSize="434,578" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="a8215226a9472822e73bd5ae947030df" Selector="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;">
                                         <ui:BrowserScope.Body>
                                           <ActivityAction x:TypeArguments="x:Object">
                                             <ActivityAction.Argument>
@@ -1103,7 +1131,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Concluir'" sap:VirtualizedContainerService.HintSize="1320,166" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Concluir'" sap:VirtualizedContainerService.HintSize="1318,166" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-3831" DesignTimeRectangle="749, 376, 73, 30" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Concluir'" FullSelectorArgument="&lt;webctrl id='issue-workflow-transition-submit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='issue-workflow-transition-submit' tag='INPUT' type='submit' class='aui-button' aaname='Pressione Alt+s para submeter este formulário' check:text='Concluir' /&gt;" Guid="ec9a2009-946b-4b1e-b203-2c6f8b4d884d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAAiCAYAAAAaq1Q/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHCSURBVGhD7ZpBbsIwEEV7qF6Bk7BAHIE9G1bcArHJJcglyBkqqra0XTLN2P6OHSZRBogKYr70FuAYj5/GyYK8kEUdk3ZBorTT6UTH7186vH/S2+HDCLAP9sJ+kCjt6/gjTjI87AeJ0qzD+mE/SJQmXWjkICZNAWLSFCAmTQFi0hQgJk0BYtIUINdLK9f0OpkmrGknXXdLeM15QZU01mZf0GyyoM1eGFOCXCVttxIk1RtalsnnMdBIuyHIxdKq7eJfCnc8prSKNvPpgI7y1zVHNz8mTvyqDB3rmW2rZD66GYSuzqSVtGwfv55xv2YR6tIdW+RCaUKhZwRhtZT4HW8mOc5uA7WMKN+NN7/rhCXzq21xG2lKWQAZT5q7AbcfCnmHotPEcXF+4Fpp2ZrDQcY7nlnhDdw9OIK90jrmOx5T2oDFOzqFpT1ppzFcTH3PaXdDXbCX4gVkBfJm2ve0LmnCfPme5q9rHiDtuu5Kmid/uqXFMmHjcTzvnH5pzeez386k1biuTNa43057PhCTpgAxaQoQk6YAMWkKEJOmADFpCpAozf4s7kf8s9heS+iH3+dAojR7AUaGfXS+AGMZHpOmDtEfCKUawBz2WiUAAAAASUVORK5CYII=" InformativeScreenshot="377509c2f7e0e24a084568fc2fce695c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -1114,7 +1142,7 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <ui:WaitUiElementVanish WaitNotActive="{x:Null}" DisplayName="Wait Element Vanish 'INPUT  issue-workflow-t...'" sap:VirtualizedContainerService.HintSize="1320,116" sap2010:WorkflowViewState.IdRef="WaitUiElementVanish_1" WaitNotVisible="True">
+                  <ui:WaitUiElementVanish WaitNotActive="{x:Null}" DisplayName="Wait Element Vanish 'INPUT  issue-workflow-t...'" sap:VirtualizedContainerService.HintSize="1318,116" sap2010:WorkflowViewState.IdRef="WaitUiElementVanish_1" WaitNotVisible="True">
                     <ui:WaitUiElementVanish.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66a26891-cd61-434f-992b-ca0ec0f68fdd" InformativeScreenshot="2f6f3ccecc555d83a5292faf572a4d16" Selector="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;&lt;webctrl id='issue-workflow-transition-cancel' tag='A' aaname='Cancelar' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -1126,7 +1154,7 @@
                       </ui:Target>
                     </ui:WaitUiElementVanish.Target>
                   </ui:WaitUiElementVanish>
-                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Retornar para fila'" sap:VirtualizedContainerService.HintSize="1320,166" sap2010:WorkflowViewState.IdRef="NClick_44" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="5" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Retornar para fila'" sap:VirtualizedContainerService.HintSize="1318,166" sap2010:WorkflowViewState.IdRef="NClick_44" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="5" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-11291" DesignTimeRectangle="864, 195, 106, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Retornar para fila'" FullSelectorArgument="&lt;webctrl aaname='Retornar para fila' parentid='stalker' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Retornar para fila' parentid='stalker' tag='A' type='' class='' check:text='Retornar para fila' /&gt;" Guid="48dd6d61-b6be-4f2c-91e7-1e640221d3a0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAUAAAAXCAYAAADDcYV1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAjSURBVChTY/j69et/dDyiBV+/fv0fHTP8xwLo5yRKBL/+BwCQ3LzKFrHDwAAAAABJRU5ErkJggg==" InformativeScreenshot="b80ca7f89340adff02f2d537154fa6d3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
