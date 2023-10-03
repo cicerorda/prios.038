@@ -3,7 +3,7 @@
     <x:Property Name="Analista" Type="InOutArgument(x:String)" />
     <x:Property Name="Processo" Type="InOutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1240,8427</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,8507</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -84,7 +84,7 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="775,8362" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap:VirtualizedContainerService.HintSize="775,8402" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Email" />
     </Sequence.Variables>
@@ -93,13 +93,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="713,8240" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="713,8280" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="651,8118" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="651,8158" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
         <ui:IfElseIf.ConditionBlocks>
           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
             <ui:IfElseIfBlock BlockType="If" Condition="[Analista = &quot;ANA HELENA RODRIGUES DA SILVA MARTINEZ&quot;]">
@@ -331,13 +331,13 @@
             </ui:IfElseIfBlock>
             <ui:IfElseIfBlock BlockType="Else">
               <ui:IfElseIfBlock.Then>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="600,2597" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="600,2637" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Alinhamento do Dia | Microsoft Teams" sap:VirtualizedContainerService.HintSize="538,2475" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="WindowMessages" OpenMode="IfNotOpen" ScopeGuid="ecb3e958-1ddc-4cdd-8c6f-24762a400c41" Version="V2">
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Alinhamento do Dia | Microsoft Teams" sap:VirtualizedContainerService.HintSize="538,2515" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="WindowMessages" OpenMode="IfNotOpen" ScopeGuid="ecb3e958-1ddc-4cdd-8c6f-24762a400c41" Version="V2">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
