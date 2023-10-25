@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SearchProcessoFila" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchProcessoFila" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Processo" Type="InOutArgument(x:String)" />
     <x:Property Name="Regiao" Type="InOutArgument(x:String)" />
@@ -8,10 +8,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,8635</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,10399</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SearchProcessoFila_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="41">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -53,10 +53,10 @@
       <x:String>UiPath.Excel</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -93,21 +93,21 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SearchProcessoFila" sap:VirtualizedContainerService.HintSize="931,8530" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SearchProcessoFila" sap:VirtualizedContainerService.HintSize="931,10334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Newcon Software Workflow" sap:VirtualizedContainerService.HintSize="869,8408" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="ca416c07-14e8-4b02-8987-d5384d4fa08e" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Newcon Software Workflow" sap:VirtualizedContainerService.HintSize="869,10212" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="ca416c07-14e8-4b02-8987-d5384d4fa08e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="835,8182" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="835,9986" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="atividade" />
             </Sequence.Variables>
@@ -116,7 +116,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="773,403" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="773,1087" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
                 <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Filas'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca416c07-14e8-4b02-8987-d5384d4fa08e" Version="V3">
                   <uix:NClick.Target>
@@ -125,10 +125,10 @@
                 </uix:NClick>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502,915" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -136,34 +136,38 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="496,806" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <Sequence sap:VirtualizedContainerService.HintSize="496,846" sap2010:WorkflowViewState.IdRef="Sequence_12">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: https://cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=3355443" sap:VirtualizedContainerService.HintSize="434,516" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="WindowMessages" OpenMode="Never" ScopeGuid="3d4ea3ca-059a-49fb-a333-f341ea713209" Version="V2">
+                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=33554433&amp;REALMO" sap:VirtualizedContainerService.HintSize="434,516" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="3d4ea3ca-059a-49fb-a333-f341ea713209" Version="V2">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                             </ActivityAction.Argument>
                             <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,290" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="user" />
+                                <Variable x:TypeArguments="ss:SecureString" Name="password" />
+                              </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Entrar'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3d4ea3ca-059a-49fb-a333-f341ea713209" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Entrar'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3d4ea3ca-059a-49fb-a333-f341ea713209" Version="V3">
                                 <uix:NClick.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=33554433&amp;REALMOID=06-000ee725-b54c-17f7-ac2a-4257ac134067&amp;GUID=0&amp;SMAUTHREASON=0&amp;METHOD=GET&amp;SMAGENTNAME=-SM-ZogPDxGA7JXcoc%2bBI%2fVXGChtfsf2nyDlg4NjQrdQus3tlJ19vSYVe2EvrDvuOthtFvs4YTBmVXLkIFMWRGe%2bGc4UM%2fKnKjcK&amp;TARGET=-SM-HTTPS%3a%2f%2fsps%2esicredi%2ecom%2ebr%2faffwebservices%2fredirectjsp%2fredirect%2ejsp%3fSMPORTALURL%3dhttps-%3A-%2F-%2Fsps%2esicredi%2ecom%2ebr-%2Faffwebservices-%2Fpublic-%2Fsaml2sso" DesignTimeRectangle="744, 416, 150, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Entrar'" FullSelectorArgument="&lt;webctrl id='btnSubmit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnSubmit' tag='INPUT' type='submit' class='btn' aaname='Entrar' check:text='Entrar' /&gt;" Guid="09671f41-d6e7-41a8-b315-615e51d7a6c2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAmCAYAAAA894IZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMfSURBVHhe7dxdSFNhHMdxX1CcTYIYYZj2grY23xHRy+4jM8llpWl2G2MwEAwJjCIQQjMCI8TKMJaxoiyzVkvbS9CdUCR2452XXihe/nrO2eY2fXzb9ASe38Xn4pzzP8ebL8+zDTwp14KVINrI1e8VaPGUJYWh0abaJsul8WxHXGj3g8cxG9yHpWA68COFaNuUdmZ82bjnPSoP7UHgmPRGokT1eo/Eh9bur8DfQLZ0mChRs2Jla/5UGgqtPVCBtqlybpe045YCabg0XoLmz6Wh0Fq95dJBomRdHIuEJrbNK1/KpENEyWp6V6xun2poyh4qGyJKVtNbhkYaYGikCYZGmmBopAn9hTZlxEBHFUz2mjjOYf5+uJt0F9r8oBmm2/uxLLlGu0efofUYpde2xog+uxnuCdk1Wg9Di5MBd5eIaDwDvv5C2BzVYlutgq3XGFoBJ0xoWbXl9o2K86MFOCVm5l25cHZWwtplwryYnxssRF2HOI7MO6y4MZwZ/lsiWOchTHtyMNRtRe0ej1efocWEogqHEQqtGlaHBQOuzFBcYwdhsxfC4408Q7KiidBM9hJc78/B3FTMeX86FvzR4wWXCNKej2n1WHlONeq6c+EbT43es0dxRYujhBZepVbOrQ5rndBWYt2AuiIW4Kd6LHnOHsbQ4uxsaMrWWbt69WRoDG1nQ8vCSEcNnCMx2yJXNJ2FdvMAFiTXth5aCYbGYmakoWXC3RkNbdmTBU+vBZUMTR+hbfyD7VZCS8X0QyUY5b7w+XW2TuXDv82hzIlvrsqHfvENs4+h6SQ0+i8YGmmCoZEmGBppgqGRJhgaaYKhkSYYGmmCoZEm1oSm/Pu6bJAoUUv+tLWhzUwapMNEifrjNcSHprwSoed9vnSYKFF33Xkxr0QIv+Tlwpti3Hl9GL+/GrAoljzZjUSbWfSl4ZfHgFuuPDSMnIx5yUv4tVWXP5aicdSKc89Pov6Z8NRMOnP2iRmnB4qS86gIZx6fEA2ZYXNbo6+tiryIr/VbKDZlZWt8ZcX5lxbSmYYXFjW2ZNQPm9WVTI3sg4hMbJstnjL8A8gKcR2hw+cFAAAAAElFTkSuQmCC" InformativeScreenshot="46fdd8e74020769d539e444deaf97e38.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='https://cookieprovider.sicredi.com.br/*' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                                  <uix:TargetAnchorable BrowserURL="https://cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=33554433&amp;REALMOID=06-000ee725-b54c-17f7-ac2a-4257ac134067&amp;GUID=0&amp;SMAUTHREASON=0&amp;METHOD=GET&amp;SMAGENTNAME=-SM-ZogPDxGA7JXcoc%2bBI%2fVXGChtfsf2nyDlg4NjQrdQus3tlJ19vSYVe2EvrDvuOthtFvs4YTBmVXLkIFMWRGe%2bGc4UM%2fKnKjcK&amp;TARGET=-SM-HTTPS%3a%2f%2fsps%2esicredi%2ecom%2ebr%2faffwebservices%2fredirectjsp%2fredirect%2ejsp%3fSMPORTALURL%3dhttps-%3A-%2F-%2Fsps%2esicredi%2ecom%2ebr-%2Faffwebservices-%2Fpublic-%2Fsaml2sso" DesignTimeRectangle="866, 416, 150, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Entrar'" FullSelectorArgument="&lt;webctrl id='btnSubmit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnSubmit' tag='INPUT' type='submit' class='btn' aaname='Entrar' check:text='Entrar' /&gt;" Guid="09671f41-d6e7-41a8-b315-615e51d7a6c2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAmCAYAAAA894IZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMhSURBVHhe7dxNSBRhHMdxX1BYWxFiCcMyE211fFsRsWP3yEzSrDTNrrEIC0IgwUYRSKHZxYiwMgoztijNrK3Nbd0NugVFZpduHj0oHn89M/vijj6+7eoEzu/wucw8M3v58vzXBZ+US6FqEK3n4hcH2ryVSWFotKGOqSppPFuhC+1OqBCzoT1YDKUDX1OItkxtZyaQhdu+Anlod4OHpQ8SJarPd0gfWue0A3+CWdLFRImaFTtb6/uKcGidQQc6/FUcl7TtFoNpODdRjtYPFeHQ2n1V0oVEyTo7Fg1NjM0LHyuli4iS1fKmTBufWmjqDJUtIkpWy2uGRgZgaGQIhkaGYGhkCPOF5rdisLsGNmedjmuYvx/uJNOFNvfADtv1HCxJ7tHOMWdovVbpvU0ZzYetx4Y52T1aE0PTyYCnxw7PRAYCA0Vo7qoVY7UGzX1WbQfUntWN3Hx8U58T8R0Ta+ZGcuG6Ug1FCzETHnc56rV3hNdXdxfAOxn9LCv6Xfvx3ZuNIbeCo07xubF7u485Q9PFIsR2KDW0WihdpRgcyQyP17F9aHYWweuLvEO2o6nXnOW4PJCNv/7l60v+9LgRnY5ArwPKrWjkIjRnLerduQhMpEau7V7c0XTU0OrQPxp/TQ0ibrdZK7RNjFP9Z6947y7H0HS2M7RMjLvFGF25ezI0hratoYmRW+8shDdulHJHM1toV/diXnJv06F15+J37H7k2srQJm1oi4WWivmxHAz21DA0s4S2/g+2mwhtOgtDajDqc9G4pKNT/fKvoFpd16XAJf5QmBsR6xiaSUKj/4KhkSEYGhmCoZEhGBoZgqGRIRgaGYKhkSEYGhliVWjqv6/LFhIlanE6bXVoM1MW6WKiRP3yWfShqUci9I4flC4mStRNT17ckQiRQ17OvCrDjZcH8POTBQtiy5M9SLSRhUAafngtuDaSh8anJXGHvESOrTr/rgJNowpOPSlBw2PhkZ1M5uRDO44PFifnXjFO3D8iGrKj2aMsH1sVPYiv/XM4NnVna3qh4PTzUjKZxmelWmzJaBi2azuZFtlbEZkYm23eSvwDOGRuVDB/Po4AAAAASUVORK5CYII=" InformativeScreenshot="db89f892ceae8ec96665080c2f572cef.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://cookieprovider.sicredi.com.br/siteminderagent/forms/login*' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
                             </Sequence>
                           </ActivityAction>
                         </uix:NApplicationCard.Body>
                         <uix:NApplicationCard.TargetApp>
-                          <uix:TargetApp Area="174, 230, 978, 463" BrowserType="Edge" IconBase64="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" InformativeScreenshot="273036e45884bdc48700943148dfdd5a.jpg" Selector="&lt;html app='msedge.exe' title='https://cookieprovider.sicredi.com.br/*' /&gt;" Title="https://cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=33554433&amp;REALMOID=06-000ee725-b54c-17f7-ac2a-4257ac134067&amp;GUID=0&amp;SMAUTHREASON=0&amp;METHOD=GET&amp;SMAGENTNAME=-SM-ZogPDxGA7JXcoc%2bBI%2fVXGChtfsf2nyDlg4NjQrdQus3tlJ19vSYVe2EvrDvuOthtFvs4YTBmVXLkIFMWRGe%2bGc4UM%2fKnKjcK&amp;TARGET=-SM-HTTPS%3a%2f%2fsps%2esicredi%2ecom%2ebr%2faffwebservices%2fredirectjsp%2fredirect%2ejsp%3fSMPORTALURL%3dhttps-%3A-%2F-%2Fsps%2esicredi%2ecom%2ebr-%2Faffwebservices-%2Fpublic-%2Fsaml2sso" Url="https://cookieprovider.sicredi.com.br/siteminderagent/forms/*" />
+                          <uix:TargetApp Area="68, 128, 1103, 552" BrowserType="Edge" IconBase64="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" InformativeScreenshot="bc55078d1108dfb6e0bb1e65d71f7814.jpg" Selector="&lt;html app='msedge.exe' title='cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=33554433&amp;amp;REALMOID=06-000835a4-e4c3-1697-b564-4251ac13e084&amp;amp;GUID=0&amp;amp;SMAUTHREASON=0&amp;amp;METHOD=GET&amp;amp;SMAGENTNAME=-SM-TMlcYMKSrkMkY%2fqyQncUOb4QSvY%2fb2aW0jgLG9vmjkHLyc4iqUd01R9Rvsyy4wOh&amp;amp;TARGET=-SM-http%3a%2f%2fcookieprovider%2esicredi%2ecom%2ebr%2fsiteminderagent%2fforms%2f*' /&gt;" Title="https://cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=33554433&amp;REALMOID=06-000ee725-b54c-17f7-ac2a-4257ac134067&amp;GUID=0&amp;SMAUTHREASON=0&amp;METHOD=GET&amp;SMAGENTNAME=-SM-ZogPDxGA7JXcoc%2bBI%2fVXGChtfsf2nyDlg4NjQrdQus3tlJ19vSYVe2EvrDvuOthtFvs4YTBmVXLkIFMWRGe%2bGc4UM%2fKnKjcK&amp;TARGET=-SM-HTTPS%3a%2f%2fsps%2esicredi%2ecom%2ebr%2faffwebservices%2fredirectjsp%2fredirect%2ejsp%3fSMPORTALURL%3dhttps-%3A-%2F-%2Fsps%2esicredi%2ecom%2ebr-%2Faffwebservices-%2Fpublic-%2Fsaml2sso" Url="https://cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc*" />
                         </uix:NApplicationCard.TargetApp>
                       </uix:NApplicationCard>
                       <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Filas'" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca416c07-14e8-4b02-8987-d5384d4fa08e" Version="V3">
@@ -176,7 +180,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="773,193" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="773,591" sap2010:WorkflowViewState.IdRef="TryCatch_5">
               <TryCatch.Try>
                 <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="2" DisplayName="Type Into 'INPUT'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ca416c07-14e8-4b02-8987-d5384d4fa08e" Text="[Processo]" Version="V3">
                   <uix:NTypeInto.Target>
@@ -191,10 +195,10 @@
                 </uix:NTypeInto>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="406,419" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -224,7 +228,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="773,677" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="773,1399" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <TryCatch.Try>
                 <uix:NGetText DisplayName="Get Text 'Atividade'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="ca416c07-14e8-4b02-8987-d5384d4fa08e" TextString="[atividade]" Timeout="10" Version="V3">
                   <uix:NGetText.Target>
@@ -239,7 +243,7 @@
                 </uix:NGetText>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502,505" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="602,1227" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -250,13 +254,13 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="496,436" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                    <Sequence sap:VirtualizedContainerService.HintSize="596,1158" sap2010:WorkflowViewState.IdRef="Sequence_32">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,312" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534,1034" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -264,24 +268,42 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <TryCatch.Try>
-                          <Sequence sap:VirtualizedContainerService.HintSize="400,556" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                          <Sequence sap:VirtualizedContainerService.HintSize="496,797" sap2010:WorkflowViewState.IdRef="Sequence_33">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="2" DisplayName="Type Into 'INPUT'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="ca416c07-14e8-4b02-8987-d5384d4fa08e" Text="[nome.TrimStart.TrimEnd.Substring(0, 30)]" Timeout="60" Version="V3">
-                              <uix:NTypeInto.Target>
-                                <uix:TargetAnchorable BrowserURL="https://consorcio-newflow.sicredi.com.br/fila" DesignTimeRectangle="1310, 328, 566, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="83617cf7-b32c-47cc-b24a-ca1ce8208c04" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjoAAAAqCAYAAAC6AfFyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQbSURBVHhe7d1RSxtZGIfx/f7fYHBwkCyzBDclZXBjXXIRiKhZVtc13QhpY3EJxEqxTp2LiOa/501O0sS6uBepS47PD17amZMZbx9OxvEHAQAABIrQAQAAwSJ0AABAsBZC5/pLoXdnff35V49hGIZhGGblxjrGemZqFjp28u3pB32+vtFoNPJnAQAAVoP1i3WM9cw0dmahYwVkiwAAAKvMesa6xsxCx7Z72MkBAACrznrGusYshA4AAEAICB0AABAsQgcAAASL0AEAAMEidAAAQLAIHQAAECxCBwAABIvQAQAAwSJ0AABAsAgdAAAQrKWGTreeKNmYm3JVjZNL3fl1AACA57TU0OlsRYpeHyrP8/EMTneUrkWqHOX+EwAAAM9n+aGz1fFHE9038dy5OxV5oeG9PzTDQvnN0B8497n6p221T9rqXcydH7tTft4Zr3XO84WdouFFb3y+fdLTYP6yW3//6X3fs8MEAMBL8X1D536gZhqpfHDlT3SURamaH/2hc7mbKkqbupwcae+nSMlmXa2DhqpprMrv/lp3r72yu3+pomy75tYipbsDt1DoOIsV+/PZZqIoqak7jZ1O5u5fV3OrpNLPmWpHkz/XDgAAwrf80HHBUXPBUduqqBTHKv1yrKvZDs4TofOxqTSqqn07XnJx4/91er+6gHGfG8zvBvn/D/P53Z2+GhuRqn/40rHQiey4mBwDAIAXY/mhs1n3XyG5OWqo4qIj2e5okhlPhM59TzuJ+/yrhjoLX1s9iJfH3BYavG+r1ciUrttuz2SPaBI6mfvJAADgpVl+6Dx4RkdXLZVd3Ox9soOnvrpybi/V2XWxErt7pTW1Z9dFyv6lVga/VZTEqaqNljrnXTV+JHQAAMBzhM7wWNVZ3FiwlNS8GK+MfRM6U/e5um9KijZbyt3q4rM+c3ILqbJas6XJZwkdAADwfUNnONDh60RRqaHJI8A97ay7YNn3VfLpWNmG7dz40Lnqqn329VfRr/bLPnRcvuy7IEoytafLeU/dv4f+uZ6KDv0jOHf9PZX56goAADjLD51obtZilbda6s29RufywMWLrcWx4rSu7pELkWnoXLRULbm19URJEivaqKg12/0p1K272HHXxhtubS1R5aBvv7CuzraLKfez7JrSq6aaWUzoAACA5YbOf/bw3TkP3BX2wsHi8ffd2HtxHr6LxxneuGsK3pADAAC++n9CBwAA4BkQOgAAIFiEDgAACBahAwAAgkXoAACAYBE6AAAgWIQOAAAIFqEDAACC9WjojEYjfwQAALCarGe+CZ13Z319vr7xRwAAAKvJesa6xsxC5/pLobenH8aL7OwAAIBVY/1iHWM9Y11jZqFj7KQVkG33MAzDMAzDrNpYx0wjxyyEDgAAQEgIHQAAECjpH3M45LQLk/2uAAAAAElFTkSuQmCC" InformativeScreenshot="37401447a61ac17f8e7d35004fe64995.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Newcon Software Workflow' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target DesignTimeRectangle="103, 328, 162, 42" ElementType="Button" FriendlyName="'Distribuir em Lote'" FullSelectorArgument="&lt;webctrl aaname='Distribuir em Lote' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Distribuir em Lote' tag='BUTTON' type='' class='btn btn-tema' check:innerText='Distribuir em Lote' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
-                                    </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
-                              </uix:NTypeInto.Target>
-                            </uix:NTypeInto>
-                            <uix:NGetText DisplayName="Get Text 'Atividade'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="ca416c07-14e8-4b02-8987-d5384d4fa08e" TextString="[atividade]" Timeout="10" Version="V3">
+                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,467" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                              <TryCatch.Try>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="2" DisplayName="Type Into '050096/0264'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="WindowMessages" ScopeIdentifier="ca416c07-14e8-4b02-8987-d5384d4fa08e" Text="[nome.TrimStart.TrimEnd.Substring(0, 30)]" Timeout="60" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://consorcio-newflow.sicredi.com.br/fila" DesignTimeRectangle="583, 265, 470, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'050096/0264'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="56a86210-eff5-4b4a-8b0b-b05d12819653" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdoAAAAiCAYAAAD4UhhvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR/SURBVHhe7dw/i9tIGIDx+2D3Ndz4Atu4mkaNmlOjxpXhUKNKjRo3SWMCagwHasQFF4sIuDFXmAQ3goAbNaree0d/bHmRYudsH0d4fjDBO5oduXt2tN78IgAA4GkILQAAT3QR2g+vX+Vd/El+/eNPBoPBYDAYPzhsQ21L+06htRd+//hZ9t/KdgYAAPwI21BPW/r+9Us70wutrTCRBQDgPraltqmdU2jtkRcAANyv31RCCwDAgxFaAACeiNACAPBEhBYAgCcitHeYTCbtKwAAhhHaOxBaAMA1hPYOhBYAcM1PHNqj5OlWnvnfbhBaAMA1jwltsZHQN2L8WPJjO6eJ2yaRRFE3Mjm0V4bXq5F99mkovjHix7kU7Wyt3Esa+mKML2G6v4xqsZZg1d7xyr7ufHn5PvQu+XIurnFlvsw12X2V7NaRJNuS0AIArnpAaHcSu6HktnLHVOYm1hnrICsTSFaWUtajqmfH1w/PH7O5mKg5mZZ5JCbYaOosXW88We3rK7LfXoa2zAKJ642H9y3zWOPchni/FMdJ2h8EjpLNjQRZk/Riuz3/gKCqbSTubCbeuiC0AICr7g+thmeqIezk4UsbuK1EL11Ee8bWj8xvIyPdwdSeNBM3kI0tra6fNTcaUEoWtPcefX99+l4nkf6r9CTs+embU2yr0nWurssiQgsAuMndoT2uvTo6nUK/nmf2+GhD64rve+IaX+L22ezY+rH5Xfwii3o/VeYSvnhil9nr4aaQfGUfSy8lrU+2rWojQRvX8ffXc0jE6eKqYXaTnezTZf3Ie3V6plzpJVeirX6vriG0AIBb3B1aG663IfPWbVSPXSB3EjuOJHoyHVs/uk+51e81YowjXphKEjSh3cVTmfqJ7OytjrlEZiFdP6tNoEFsXo/ue1LI2jOnU+4x9WVqQskKPTZXB0n02nJvD7MaYN20vgWhBQDc6O7QSh6KOT/b1QZNT5Hr20aTZn5s/U37nB8d22AG9TPkxmn/+nXYPF62vrtvqV+bixDrxMX6Jsx/SxbY2LdjppF/MYQWAHDV/aEtM5k7q/YDQwdZdb9DLQ69DxFpIL3mRDu6fmy+bxefPwx1SMTV180h9iip3+5vH1mfPjClRve1kXXE1aNsexBu2MfObrfe3nJ2EfQaJ1oAwI3uD60q1r7MNGCBOxO/PR2W+7UsHCN+EIg/0/nk/KngofXW0HylcXVmnsznjhgnFvsr0kYpu6Unxgsk1Gvesg2mrg/e/A528P1lC5lOpjLrTqk6FmnzSLnQa44zlzDwxFlk+mPCG4QWAHCjh4S2VpXnU2RPVQ7Pj60fnq96fx70ll7rXdrF9k+K2i/6xu436nLfIYQWAHDN40L7v3CQVTjypzlPQGgBANf8ZKH9bxFaAMA1hBYAgCcitAAAPBGhBQDgiQgtAABPNBjad/En2X8b+hsZAABwK9tS29TOKbQfXr+K9/EzsQUA4F+yDbUtff/6pZ3phdayF36L/6qPvAwGg8FgMH5s2Ib2I2tdhBYAADwWoQUA4GlE/gHgTu7YG1gT+gAAAABJRU5ErkJggg==" InformativeScreenshot="41693cd52fceefecbe79ba0589f20f5e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Newcon Software Workflow' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                              </TryCatch.Try>
+                              <TryCatch.Catches>
+                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,295" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ActivityAction x:TypeArguments="s:Exception">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                    </ActivityAction.Argument>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="2" DisplayName="Type Into '050096/0264'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="WindowMessages" ScopeIdentifier="ca416c07-14e8-4b02-8987-d5384d4fa08e" Text="[nome.TrimStart.TrimEnd]" Timeout="60" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://consorcio-newflow.sicredi.com.br/fila" DesignTimeRectangle="583, 265, 470, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'050096/0264'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control ' aaname='' /&gt;" Guid="56a86210-eff5-4b4a-8b0b-b05d12819653" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdoAAAAiCAYAAAD4UhhvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR/SURBVHhe7dw/i9tIGIDx+2D3Ndz4Atu4mkaNmlOjxpXhUKNKjRo3SWMCagwHasQFF4sIuDFXmAQ3goAbNaree0d/bHmRYudsH0d4fjDBO5oduXt2tN78IgAA4GkILQAAT3QR2g+vX+Vd/El+/eNPBoPBYDAYPzhsQ21L+06htRd+//hZ9t/KdgYAAPwI21BPW/r+9Us70wutrTCRBQDgPraltqmdU2jtkRcAANyv31RCCwDAgxFaAACeiNACAPBEhBYAgCcitHeYTCbtKwAAhhHaOxBaAMA1hPYOhBYAcM1PHNqj5OlWnvnfbhBaAMA1jwltsZHQN2L8WPJjO6eJ2yaRRFE3Mjm0V4bXq5F99mkovjHix7kU7Wyt3Esa+mKML2G6v4xqsZZg1d7xyr7ufHn5PvQu+XIurnFlvsw12X2V7NaRJNuS0AIArnpAaHcSu6HktnLHVOYm1hnrICsTSFaWUtajqmfH1w/PH7O5mKg5mZZ5JCbYaOosXW88We3rK7LfXoa2zAKJ642H9y3zWOPchni/FMdJ2h8EjpLNjQRZk/Riuz3/gKCqbSTubCbeuiC0AICr7g+thmeqIezk4UsbuK1EL11Ee8bWj8xvIyPdwdSeNBM3kI0tra6fNTcaUEoWtPcefX99+l4nkf6r9CTs+embU2yr0nWurssiQgsAuMndoT2uvTo6nUK/nmf2+GhD64rve+IaX+L22ezY+rH5Xfwii3o/VeYSvnhil9nr4aaQfGUfSy8lrU+2rWojQRvX8ffXc0jE6eKqYXaTnezTZf3Ie3V6plzpJVeirX6vriG0AIBb3B1aG663IfPWbVSPXSB3EjuOJHoyHVs/uk+51e81YowjXphKEjSh3cVTmfqJ7OytjrlEZiFdP6tNoEFsXo/ue1LI2jOnU+4x9WVqQskKPTZXB0n02nJvD7MaYN20vgWhBQDc6O7QSh6KOT/b1QZNT5Hr20aTZn5s/U37nB8d22AG9TPkxmn/+nXYPF62vrtvqV+bixDrxMX6Jsx/SxbY2LdjppF/MYQWAHDV/aEtM5k7q/YDQwdZdb9DLQ69DxFpIL3mRDu6fmy+bxefPwx1SMTV180h9iip3+5vH1mfPjClRve1kXXE1aNsexBu2MfObrfe3nJ2EfQaJ1oAwI3uD60q1r7MNGCBOxO/PR2W+7UsHCN+EIg/0/nk/KngofXW0HylcXVmnsznjhgnFvsr0kYpu6Unxgsk1Gvesg2mrg/e/A528P1lC5lOpjLrTqk6FmnzSLnQa44zlzDwxFlk+mPCG4QWAHCjh4S2VpXnU2RPVQ7Pj60fnq96fx70ll7rXdrF9k+K2i/6xu436nLfIYQWAHDN40L7v3CQVTjypzlPQGgBANf8ZKH9bxFaAMA1hBYAgCcitAAAPBGhBQDgiQgtAABPNBjad/En2X8b+hsZAABwK9tS29TOKbQfXr+K9/EzsQUA4F+yDbUtff/6pZ3phdayF36L/6qPvAwGg8FgMH5s2Ib2I2tdhBYAADwWoQUA4GlE/gHgTu7YG1gT+gAAAABJRU5ErkJggg==" InformativeScreenshot="41693cd52fceefecbe79ba0589f20f5e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Newcon Software Workflow' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                  </ActivityAction>
+                                </Catch>
+                              </TryCatch.Catches>
+                            </TryCatch>
+                            <uix:NGetText DisplayName="Get Text 'Atividade'" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="ca416c07-14e8-4b02-8987-d5384d4fa08e" TextString="[atividade]" Timeout="10" Version="V3">
                               <uix:NGetText.Target>
                                 <uix:TargetAnchorable BrowserURL="https://consorcio-newflow.sicredi.com.br/fila" DesignTimeRectangle="1360, 494, 313, 121" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'ANÁLISE DE'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tabindex='8' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tabindex='8' type='' tag='TD' class='' /&gt;" Guid="077481be-d87f-49c5-a362-01da86e754e3" InformativeScreenshot="0050779361d70d47eb2eb7710f0c6522.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Newcon Software Workflow' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                                   <uix:TargetAnchorable.Anchors>
@@ -295,10 +317,10 @@
                           </Sequence>
                         </TryCatch.Try>
                         <TryCatch.Catches>
-                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,140" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500,21" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>

@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1599,12877</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,13837</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
@@ -89,12 +89,15 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1609,12812" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap:VirtualizedContainerService.HintSize="1472,12812" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Default="0" Name="Count" />
+      <Variable x:TypeArguments="x:Int32" Name="Count">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="regiao" />
       <Variable x:TypeArguments="x:String" Name="analista" />
       <Variable x:TypeArguments="x:Boolean" Name="login" />
@@ -104,8 +107,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1547,142" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge.exe" />
-    <TryCatch sap2010:Annotation.AnnotationText="Efetuar login no Jira" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1547,866" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+    <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1410,142" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge.exe" />
+    <TryCatch sap2010:Annotation.AnnotationText="Efetuar login no Jira" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1410,866" sap2010:WorkflowViewState.IdRef="TryCatch_9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -226,22 +229,22 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Looping para continuar enviando os processos até que todos os chamados sejam respondidos" Condition="[Count &lt; 50]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1547,11602" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Looping para continuar enviando os processos até que todos os chamados sejam respondidos" Condition="[Count &lt; 50]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1410,11602" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1511,11396" sap2010:WorkflowViewState.IdRef="Sequence_20">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1374,11396" sap2010:WorkflowViewState.IdRef="Sequence_20">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Projeto de serviço" sap:VirtualizedContainerService.HintSize="1449,11274" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Projeto de serviço" sap:VirtualizedContainerService.HintSize="1312,11274" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1415,11048" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1278,11048" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="Grupo" />
                     <Variable x:TypeArguments="x:String" Name="Cota" />
@@ -257,7 +260,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1353,3215" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
+                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1216,3215" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
                         <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="600,3031" sap2010:WorkflowViewState.IdRef="Sequence_51">
@@ -494,7 +497,7 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                   </ActivityAction.Argument>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="400,304" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="400,302" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -543,8 +546,8 @@
                       <ActivityFunc x:TypeArguments="x:Boolean" />
                     </ui:RetryScope.Condition>
                   </ui:RetryScope>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1318,101" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;descricao: &quot;+descricao]" />
-                  <uix:NGetText DisplayName="Get Text 'Editar'" sap:VirtualizedContainerService.HintSize="1353,166" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" TextString="[titulo]" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1216,101" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;descricao: &quot;+descricao]" />
+                  <uix:NGetText DisplayName="Get Text 'Editar'" sap:VirtualizedContainerService.HintSize="1216,166" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" TextString="[titulo]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-2663" CvType="AnyWordGroup" DesignTimeRectangle="403, 244, 794, 43" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'PATRICIA FRANCISCA'" FullSelectorArgument="&lt;webctrl id='summary-val' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl id='summary-val' tag='H1' type='' class='editable-field inactive' /&gt;" Guid="975ac95b-270f-47a0-a9f2-438b30c47b28" ImageBase64="" InformativeScreenshot="81b7c1017cd2669699e73ea7b5c710b2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='[CCRD-2663] PATRICIA FRANCISCA INACIO DA SILVA 010452/0080-00 - Sicredi - JIRA' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -555,8 +558,8 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1353,101" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;titulo: &quot;+titulo]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="1353,71" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1216,101" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;titulo: &quot;+titulo]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="1216,71" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[TextoChamado]</OutArgument>
                     </Assign.To>
@@ -564,15 +567,15 @@
                       <InArgument x:TypeArguments="x:String">[String.format("{0} {1} {2} {3}", Grupo, Cota, Descricao, titulo)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1353,101" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[chamado]" />
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim paragrafo As String = ObterInfos&#xA;Dim padrao_n1 As String = &quot;/(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/&quot;&#xA;Dim padrao_n2 As String = &quot;/(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/&quot;&#xA;Dim n1 As String = &quot;&quot;&#xA;Dim n2 As String = &quot;&quot;&#xA;&#xA;Dim match_n1 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n1)&#xA;Dim match_n2 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n2)&#xA;&#xA;For Each m1 As System.Text.RegularExpressions.Match In match_n1&#xA;    n1 = m1.Value&#xA;    For Each m2 As System.Text.RegularExpressions.Match In match_n2&#xA;        n2 = m2.Value.PadLeft(4, &quot;0&quot;c)&#xA;        Exit For&#xA;    Next&#xA;    If Not String.IsNullOrEmpty(n2) Then&#xA;        Exit For&#xA;    End If&#xA;Next&#xA;&#xA;If Not String.IsNullOrEmpty(n1) AndAlso Not String.IsNullOrEmpty(n2) Then&#xA;    result = n1&#xA;Else&#xA;    result = &quot;dados não encontrados&quot;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="1353,174" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1216,101" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[chamado]" />
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim paragrafo As String = ObterInfos&#xA;Dim padrao_n1 As String = &quot;/(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/&quot;&#xA;Dim padrao_n2 As String = &quot;/(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/&quot;&#xA;Dim n1 As String = &quot;&quot;&#xA;Dim n2 As String = &quot;&quot;&#xA;&#xA;Dim match_n1 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n1)&#xA;Dim match_n2 As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(paragrafo, padrao_n2)&#xA;&#xA;For Each m1 As System.Text.RegularExpressions.Match In match_n1&#xA;    n1 = m1.Value&#xA;    For Each m2 As System.Text.RegularExpressions.Match In match_n2&#xA;        n2 = m2.Value.PadLeft(4, &quot;0&quot;c)&#xA;        Exit For&#xA;    Next&#xA;    If Not String.IsNullOrEmpty(n2) Then&#xA;        Exit For&#xA;    End If&#xA;Next&#xA;&#xA;If Not String.IsNullOrEmpty(n1) AndAlso Not String.IsNullOrEmpty(n2) Then&#xA;    result = n1&#xA;Else&#xA;    result = &quot;dados não encontrados&quot;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="1216,174" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                     <ui:InvokeCode.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="ObterInfos">[TextoChamado]</InArgument>
                       <OutArgument x:TypeArguments="x:String" x:Key="result">[resultadoString]</OutArgument>
                     </ui:InvokeCode.Arguments>
                   </ui:InvokeCode>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1353,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[resultadoString]" />
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1353,594" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1216,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[resultadoString]" />
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1216,594" sap2010:WorkflowViewState.IdRef="TryCatch_14">
                     <TryCatch.Try>
                       <Sequence sap:VirtualizedContainerService.HintSize="400,357" sap2010:WorkflowViewState.IdRef="Sequence_52">
                         <sap:WorkflowViewStateService.ViewState>
@@ -615,7 +618,7 @@
                       </Catch>
                     </TryCatch.Catches>
                   </TryCatch>
-                  <If Condition="[resultadoString = &quot;dados não encontrados&quot;]" sap:VirtualizedContainerService.HintSize="1353,5372" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[resultadoString = &quot;dados não encontrados&quot;]" sap:VirtualizedContainerService.HintSize="1216,5372" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="500,2045" sap2010:WorkflowViewState.IdRef="Sequence_8">
                         <sap:WorkflowViewStateService.ViewState>
@@ -644,7 +647,7 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                 </ActivityAction.Argument>
-                                <Sequence sap:VirtualizedContainerService.HintSize="500,857" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <Sequence sap:VirtualizedContainerService.HintSize="502,817" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -819,7 +822,7 @@
                                       </uix:NClick>
                                       <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Iniciar atendimento'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_53" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
                                         <uix:NClick.Target>
-                                          <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-16102" DesignTimeRectangle="530, 295, 120, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Iniciar atendimento'" FullSelectorArgument="&lt;webctrl parentid='action_id_41' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='action_id_41' tag='SPAN' type='' class='' aaname='Iniciar atendimento' check:innerText='Iniciar atendimento' /&gt;" Guid="5305375d-7808-4902-acda-707379a49f00" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAUCAYAAABPuVmJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKPSURBVGhD7Za9SgRBEIR9Np9AfAB9Ac9Y84s1NRQ0ETUz0EQ0ETHRyEgwMVYwOYxGvuUKymZmzzvO35mCYZ3p6u7q7t05F1JDVWgDrwxt4JWhDbwytIFXhg8D3945SMcnF+NdPx4en9LK2rB79oF4G8OdNBq9jU/+Lqh1sLmdnl9eu7U6GKab2/ux9W9g5oH/Rny1fh/4T2PWWtvAp8C/HjhFUdzp+XVaWt1Mi8vr3RWmYmX3Kx1/eM7lyvMrnb04LOXDDm/v8KzLV/oZgO/+xJOvzvCXLs/n5/KhPrRGO0C/bCy0aeDy15WuOuF4LM9PfxwlbeptrvefrZUV84HegZOE4CRRIgWRKCXj3BNcXt11HDUCf7B/dNadA2yxEOdGcE5DZUer810/8Pjai8/ib7fjLztn2PABka+97DxpsvLrxVRP6JP/z9OnTbm1Vy7vb65WH758nAMmfuEKAKIo2Vl68yPcJ8JjSCD8zyLmjU2Ie3IMt3aL+TxeTrfbo3/kw/UBR36fNu+LEONPqhXkapjLwHOBhWiDr2uKpbcSOzz4fcAuX1b8QqVf8ZyrRYxcPnRooMQhnsPt0Z+n1wmHvbQ5f5I2fKYZeNQiuF7hW7/wyPMYJdGOWHSM5/oB+1K8XD6PF3MBzvqudOfDYS9tkd+nDR/1RYjxc7X6HuDPreE1zGXgKgZ/IfcbHkWzn+YLR5vnYF/6wgGx3O7I5UOHBs7faJNd/HkNnGdJG2fTDhz7t/2GAyXQ1SSe++Q48aWBXwI5aZL8eXs1IEAcivbCqUd85XQtng+fXDz8ePJfs+zR3+sEcNgrVi5fSRs+3lsQ4+dqhePx4rDBh4E3/H+0gVeGNvDK0AZeGdrAq0JK75xdY2TQVuDKAAAAAElFTkSuQmCC" InformativeScreenshot="4b945d8e0380e829b2551313bebdb609.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='[CCRD-16102] MARIA DERLANGE DOS SANTOS MATOS - 20897022300 - Sicredi - JIRA' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                          <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-16102" DesignTimeRectangle="530, 295, 120, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Iniciar atendimento'" FullSelectorArgument="&lt;webctrl parentid='action_id_41' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='action_id_41' tag='SPAN' type='' class='' aaname='Iniciar atendimento' check:innerText='Iniciar atendimento' /&gt;" Guid="5305375d-7808-4902-acda-707379a49f00" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAUCAYAAABPuVmJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKPSURBVGhD7Za9SgRBEIR9Np9AfAB9Ac9Y84s1NRQ0ETUz0EQ0ETHRyEgwMVYwOYxGvuUKymZmzzvO35mCYZ3p6u7q7t05F1JDVWgDrwxt4JWhDbwytIFXhg8D3945SMcnF+NdPx4en9LK2rB79oF4G8OdNBq9jU/+Lqh1sLmdnl9eu7U6GKab2/ux9W9g5oH/Rny1fh/4T2PWWtvAp8C/HjhFUdzp+XVaWt1Mi8vr3RWmYmX3Kx1/eM7lyvMrnb04LOXDDm/v8KzLV/oZgO/+xJOvzvCXLs/n5/KhPrRGO0C/bCy0aeDy15WuOuF4LM9PfxwlbeptrvefrZUV84HegZOE4CRRIgWRKCXj3BNcXt11HDUCf7B/dNadA2yxEOdGcE5DZUer810/8Pjai8/ib7fjLztn2PABka+97DxpsvLrxVRP6JP/z9OnTbm1Vy7vb65WH758nAMmfuEKAKIo2Vl68yPcJ8JjSCD8zyLmjU2Ie3IMt3aL+TxeTrfbo3/kw/UBR36fNu+LEONPqhXkapjLwHOBhWiDr2uKpbcSOzz4fcAuX1b8QqVf8ZyrRYxcPnRooMQhnsPt0Z+n1wmHvbQ5f5I2fKYZeNQiuF7hW7/wyPMYJdGOWHSM5/oB+1K8XD6PF3MBzvqudOfDYS9tkd+nDR/1RYjxc7X6HuDPreE1zGXgKgZ/IfcbHkWzn+YLR5vnYF/6wgGx3O7I5UOHBs7faJNd/HkNnGdJG2fTDhz7t/2GAyXQ1SSe++Q48aWBXwI5aZL8eXs1IEAcivbCqUd85XQtng+fXDz8ePJfs+zR3+sEcNgrVi5fSRs+3lsQ4+dqhePx4rDBh4E3/H+0gVeGNvDK0AZeGdrAq0JK75xdY2TQVuDKAAAAAElFTkSuQmCC" InformativeScreenshot="535a52e72660dec20f93df4a75bc7cd9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='[CCRD-16102] MARIA DERLANGE DOS SANTOS MATOS - 20897022300 - Sicredi - JIRA' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                         </uix:NClick.Target>
                                       </uix:NClick>
                                     </Sequence>
@@ -1130,7 +1133,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Concluir'" sap:VirtualizedContainerService.HintSize="1318,166" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Concluir'" sap:VirtualizedContainerService.HintSize="1216,166" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-3831" DesignTimeRectangle="749, 376, 73, 30" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Concluir'" FullSelectorArgument="&lt;webctrl id='issue-workflow-transition-submit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='issue-workflow-transition-submit' tag='INPUT' type='submit' class='aui-button' aaname='Pressione Alt+s para submeter este formulário' check:text='Concluir' /&gt;" Guid="ec9a2009-946b-4b1e-b203-2c6f8b4d884d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAAiCAYAAAAaq1Q/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHCSURBVGhD7ZpBbsIwEEV7qF6Bk7BAHIE9G1bcArHJJcglyBkqqra0XTLN2P6OHSZRBogKYr70FuAYj5/GyYK8kEUdk3ZBorTT6UTH7186vH/S2+HDCLAP9sJ+kCjt6/gjTjI87AeJ0qzD+mE/SJQmXWjkICZNAWLSFCAmTQFi0hQgJk0BYtIUINdLK9f0OpkmrGknXXdLeM15QZU01mZf0GyyoM1eGFOCXCVttxIk1RtalsnnMdBIuyHIxdKq7eJfCnc8prSKNvPpgI7y1zVHNz8mTvyqDB3rmW2rZD66GYSuzqSVtGwfv55xv2YR6tIdW+RCaUKhZwRhtZT4HW8mOc5uA7WMKN+NN7/rhCXzq21xG2lKWQAZT5q7AbcfCnmHotPEcXF+4Fpp2ZrDQcY7nlnhDdw9OIK90jrmOx5T2oDFOzqFpT1ppzFcTH3PaXdDXbCX4gVkBfJm2ve0LmnCfPme5q9rHiDtuu5Kmid/uqXFMmHjcTzvnH5pzeez386k1biuTNa43057PhCTpgAxaQoQk6YAMWkKEJOmADFpCpAozf4s7kf8s9heS+iH3+dAojR7AUaGfXS+AGMZHpOmDtEfCKUawBz2WiUAAAAASUVORK5CYII=" InformativeScreenshot="377509c2f7e0e24a084568fc2fce695c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -1141,7 +1144,7 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <ui:WaitUiElementVanish WaitNotActive="{x:Null}" DisplayName="Wait Element Vanish 'INPUT  issue-workflow-t...'" sap:VirtualizedContainerService.HintSize="1318,116" sap2010:WorkflowViewState.IdRef="WaitUiElementVanish_1" WaitNotVisible="True">
+                  <ui:WaitUiElementVanish WaitNotActive="{x:Null}" DisplayName="Wait Element Vanish 'INPUT  issue-workflow-t...'" sap:VirtualizedContainerService.HintSize="1216,116" sap2010:WorkflowViewState.IdRef="WaitUiElementVanish_1" WaitNotVisible="True">
                     <ui:WaitUiElementVanish.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66a26891-cd61-434f-992b-ca0ec0f68fdd" InformativeScreenshot="2f6f3ccecc555d83a5292faf572a4d16" Selector="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;&lt;webctrl id='issue-workflow-transition-cancel' tag='A' aaname='Cancelar' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -1153,7 +1156,7 @@
                       </ui:Target>
                     </ui:WaitUiElementVanish.Target>
                   </ui:WaitUiElementVanish>
-                  <uix:NClick ActivateBefore="True" ClickType="Double" ContinueOnError="True" DisplayName="Click 'Retornar para fila'" sap:VirtualizedContainerService.HintSize="1318,166" sap2010:WorkflowViewState.IdRef="NClick_44" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="5" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Double" ContinueOnError="True" DisplayName="Click 'Retornar para fila'" sap:VirtualizedContainerService.HintSize="1216,166" sap2010:WorkflowViewState.IdRef="NClick_44" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2e47b41-ef3b-46ea-ac96-7580ccb1518c" Timeout="5" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-11291" DesignTimeRectangle="864, 195, 106, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Retornar para fila'" FullSelectorArgument="&lt;webctrl aaname='Retornar para fila' parentid='stalker' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Retornar para fila' parentid='stalker' tag='A' type='' class='' check:text='Retornar para fila' /&gt;" Guid="48dd6d61-b6be-4f2c-91e7-1e640221d3a0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAUAAAAXCAYAAADDcYV1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAjSURBVChTY/j69et/dDyiBV+/fv0fHTP8xwLo5yRKBL/+BwCQ3LzKFrHDwAAAAABJRU5ErkJggg==" InformativeScreenshot="b80ca7f89340adff02f2d537154fa6d3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://teams.sicredi.io/projects/CCRD/queues/custom/1287/CCRD-*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
