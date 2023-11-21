@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,5598</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,5165</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetregionAtend_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -89,7 +89,7 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetregionAtend" sap:VirtualizedContainerService.HintSize="742,5453" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetregionAtend" sap:VirtualizedContainerService.HintSize="742,5100" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="Edge" />
       <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -100,8 +100,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="rpa_cas_cobrativ" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="680,190" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[user]" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="680,276" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="680,193" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <TryCatch.Try>
         <Sequence sap:VirtualizedContainerService.HintSize="400,302" sap2010:WorkflowViewState.IdRef="Sequence_36">
           <sap:WorkflowViewStateService.ViewState>
@@ -128,10 +127,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -143,18 +142,18 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="680,4785" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="5">
+    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="680,4745" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="5">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="638,4601" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="638,4561" sap2010:WorkflowViewState.IdRef="Sequence_22">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="576,4479" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="576,4439" sap2010:WorkflowViewState.IdRef="TryCatch_3">
               <TryCatch.Try>
-                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Intranet Newcon" sap:VirtualizedContainerService.HintSize="538,4242" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9437a774-0237-476a-934e-872b81e9082e" Version="V2">
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Intranet Newcon" sap:VirtualizedContainerService.HintSize="538,4202" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9437a774-0237-476a-934e-872b81e9082e" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -200,12 +199,12 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'INPUT fieldUser'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="9437a774-0237-476a-934e-872b81e9082e" Text="[user]" Timeout="5" Version="V3">
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'INPUT fieldUser'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="9437a774-0237-476a-934e-872b81e9082e" Text="andrade_cicero" Timeout="5" Version="V3">
                                     <uix:NTypeInto.Target>
                                       <uix:TargetAnchorable BrowserURL="https://cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=33554433&amp;REALMOID=06-000ee725-b54c-17f7-ac2a-4257ac134067&amp;GUID=&amp;SMAUTHREASON=0&amp;METHOD=GET&amp;SMAGENTNAME=-SM-ZogPDxGA7JXcoc%2bBI%2fVXGChtfsf2nyDlg4NjQrdQus3tlJ19vSYVe2EvrDvuOthtFvs4YTBmVXLkIFMWRGe%2bGc4UM%2fKnKjcK&amp;TARGET=-SM-HTTPS%3a%2f%2fsps%2esicredi%2ecom%2ebr%2faffwebservices%2fredirectjsp%2fredirect%2ejsp%3fSMPORTALURL%3dhttps-%3A-%2F-%2Fsps%2esicredi%2ecom%2ebr-%2Faffwebservices-%2Fpublic-%2Fsaml2sso" CvElementArea="648, 305, 335, 43" CvTextArea="660, 319, 51, 13" CvTextArgument="Usuario" CvType="InputBox" DesignTimeRectangle="649, 306, 332, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT fieldUser'" FullSelectorArgument="&lt;webctrl id='fieldUser' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fieldUser' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="fafa70fa-f499-4880-b6bd-679c248bec73" ImageBase64="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" InformativeScreenshot="c1c4cfd9debda254079154e3c325a7cf.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=33554433&amp;amp;REALMOID=06-000ee725-b54c-17f7-ac2a-4257ac134067&amp;amp;GUID=&amp;amp;SMAUTHREASON=0&amp;amp;METHOD=GET&amp;amp;SMAGENTNAME=-SM-ZogPDxGA7JXcoc%2bBI%2fVXGChtfsf2nyDlg4NjQrdQus3tlJ19vSYVe2EvrDvuOthtFvs4YTBmVXLkIFMWRGe%2bGc4UM%2fKnKjcK&amp;amp;TARGET=-SM-HTTPS%3a%2f%2fsps%2esicredi%2ecom%2ebr%2faffwebservices%2fredirectjsp%2fredirect%2ejsp%3fSMPORTALURL%3dhttps-%3A-%2F-%2Fsps%2esicredi%2ecom%2ebr-%2Faffwebservices-%2Fpublic-%2Fsaml2sso' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
                                     </uix:NTypeInto.Target>
                                   </uix:NTypeInto>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'INPUT fieldPassword'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="9437a774-0237-476a-934e-872b81e9082e" SecureText="[password]" Timeout="5" Version="V3">
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'INPUT fieldPassword'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="9437a774-0237-476a-934e-872b81e9082e" Text="Ci15ro04an99%%" Timeout="5" Version="V3">
                                     <uix:NTypeInto.Target>
                                       <uix:TargetAnchorable BrowserURL="https://cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=33554433&amp;REALMOID=06-000ee725-b54c-17f7-ac2a-4257ac134067&amp;GUID=&amp;SMAUTHREASON=0&amp;METHOD=GET&amp;SMAGENTNAME=-SM-ZogPDxGA7JXcoc%2bBI%2fVXGChtfsf2nyDlg4NjQrdQus3tlJ19vSYVe2EvrDvuOthtFvs4YTBmVXLkIFMWRGe%2bGc4UM%2fKnKjcK&amp;TARGET=-SM-HTTPS%3a%2f%2fsps%2esicredi%2ecom%2ebr%2faffwebservices%2fredirectjsp%2fredirect%2ejsp%3fSMPORTALURL%3dhttps-%3A-%2F-%2Fsps%2esicredi%2ecom%2ebr-%2Faffwebservices-%2Fpublic-%2Fsaml2sso" CvElementArea="648, 360, 335, 43" CvTextArea="660, 374, 41, 13" CvTextArgument="Senha" CvType="InputBox" DesignTimeRectangle="649, 361, 332, 40" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT fieldPassword'" FullSelectorArgument="&lt;webctrl id='fieldPassword' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fieldPassword' tag='INPUT' type='password' class='form-control' aaname='' /&gt;" Guid="14e685d2-8784-4908-8fee-ece1d7344360" ImageBase64="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" InformativeScreenshot="3687b1d59691b49e1128ac4eaf3319a2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='cookieprovider.sicredi.com.br/siteminderagent/forms/login.fcc?TYPE=33554433&amp;amp;REALMOID=06-000ee725-b54c-17f7-ac2a-4257ac134067&amp;amp;GUID=&amp;amp;SMAUTHREASON=0&amp;amp;METHOD=GET&amp;amp;SMAGENTNAME=-SM-ZogPDxGA7JXcoc%2bBI%2fVXGChtfsf2nyDlg4NjQrdQus3tlJ19vSYVe2EvrDvuOthtFvs4YTBmVXLkIFMWRGe%2bGc4UM%2fKnKjcK&amp;amp;TARGET=-SM-HTTPS%3a%2f%2fsps%2esicredi%2ecom%2ebr%2faffwebservices%2fredirectjsp%2fredirect%2ejsp%3fSMPORTALURL%3dhttps-%3A-%2F-%2Fsps%2esicredi%2ecom%2ebr-%2Faffwebservices-%2Fpublic-%2Fsaml2sso' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
                                     </uix:NTypeInto.Target>
